@@ -1,0 +1,132 @@
+{
+	"name": "plaer_tank_body",
+	"plugin-id": "Sprite",
+	"sid": 330677360769454,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7351470,
+						"collisionPoly": {
+							"points": [
+								0.041666666666666664,
+								0.047619047619047616,
+								0.5,
+								0.023809523809523808,
+								0.9375,
+								0.047619047619047616,
+								0.9583333333333334,
+								0.5,
+								0.9375,
+								0.9285714285714286,
+								0.5,
+								0.9523809523809523,
+								0.041666666666666664,
+								0.9285714285714286,
+								0.08333333333333333,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "soldier",
+								"x": 0.5,
+								"y": 1.4285714285714286
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 48,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9985987,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "soldier",
+								"x": 0.5,
+								"y": 1.4285714285714286
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 157825211114197,
+				"name": "normal",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4858846,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "soldier",
+								"x": 0.5,
+								"y": 1.4285714285714286
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 48,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4854729,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "soldier",
+								"x": 0.5,
+								"y": 1.4285714285714286
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 519034048433146,
+				"name": "demage",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

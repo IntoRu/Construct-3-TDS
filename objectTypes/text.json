@@ -1,0 +1,16 @@
+{
+	"name": "Text",
+	"plugin-id": "Text",
+	"sid": 866122581438868,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "class",
+			"type": "string",
+			"desc": "",
+			"sid": 792927872829390
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

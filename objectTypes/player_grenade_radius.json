@@ -1,0 +1,68 @@
+{
+	"name": "player_grenade_radius",
+	"plugin-id": "Sprite",
+	"sid": 839884529888987,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 875908959296748
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 541837166628057
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 120,
+						"height": 120,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3829471,
+						"collisionPoly": {
+							"points": [
+								0.175,
+								0.175,
+								0.5,
+								0.025,
+								0.8083333333333333,
+								0.18333333333333332,
+								0.9166666666666666,
+								0.5,
+								0.7916666666666666,
+								0.7916666666666666,
+								0.5,
+								0.925,
+								0.2,
+								0.7916666666666666,
+								0.06666666666666667,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 392409053024143,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

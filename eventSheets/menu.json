@@ -1,0 +1,123 @@
+{
+	"name": "menu",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Старт новой игры"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 729895164178800,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Text"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Text",
+					"sid": 150774461497001,
+					"parameters": {
+						"instance-variable": "class",
+						"comparison": 0,
+						"value": "\"start\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 116082162738061,
+					"parameters": {
+						"layout": "level1"
+					}
+				}
+			],
+			"sid": 244993752711198
+		},
+		{
+			"eventType": "comment",
+			"text": "Продолжить игру"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 459283913216092,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Text"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Text",
+					"sid": 705406729617518,
+					"parameters": {
+						"instance-variable": "class",
+						"comparison": 0,
+						"value": "\"continue\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "System",
+					"sid": 524067508557634,
+					"parameters": {
+						"slot": "\"mysave\""
+					}
+				}
+			],
+			"sid": 814217317850217
+		},
+		{
+			"eventType": "comment",
+			"text": "Выход"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 364574986467693,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Text"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Text",
+					"sid": 802867631398640,
+					"parameters": {
+						"instance-variable": "class",
+						"comparison": 0,
+						"value": "\"exit\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "close",
+					"objectClass": "Browser",
+					"sid": 577298046410298
+				}
+			],
+			"sid": 802669685320113
+		}
+	],
+	"sid": 480983303725588
+}
