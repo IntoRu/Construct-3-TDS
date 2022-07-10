@@ -286,7 +286,144 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "bonusbullets.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 586359170538785,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bonusgrenades.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 911809968792210,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bonuslifes.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 699850492334193,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bonusshells.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 924788414135114,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bonusupgrade.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 716825999104408,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "checkpoint.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 757952007076696,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "damage.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 788279205941187,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "destroy.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 636373097867616,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "empty.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 470133662324945,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "grenade.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 593185720134630,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "mandestroy.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 587850711258956,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "rocketmachine.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 317867194886235,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "select.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 193122739995818,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "shell.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 874272041683027,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "shoot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 144102299485248,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "turretrocket.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 461576061833000,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "turretshell.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 409870428087268,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

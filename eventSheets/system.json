@@ -888,6 +888,17 @@
 							"sid": 716270431873024
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 200238675922084,
+							"parameters": {
+								"audio-file": "damage",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 526150623608734,
@@ -961,6 +972,17 @@
 							"id": "destroy",
 							"objectClass": "enemy_tank_shell",
 							"sid": 339606396946649
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 781434076890917,
+							"parameters": {
+								"audio-file": "damage",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"id": "wait",
@@ -1051,6 +1073,17 @@
 							"id": "destroy",
 							"objectClass": "enemy_rocket",
 							"sid": 736213788051133
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 657905340751365,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"id": "wait",
@@ -1161,6 +1194,17 @@
 								"instance-variable": "state",
 								"value": "\"damage\""
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 422210736758604,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 308674170228513
@@ -1256,6 +1300,17 @@
 							"parameters": {
 								"instance-variable": "state",
 								"value": "\"damage\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 784252317240063,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						},
 						{
@@ -1451,6 +1506,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 936588188559610,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"type": "comment",
 							"text": "тряска при взрыве"
 						},
@@ -1579,6 +1645,17 @@
 							"id": "destroy",
 							"objectClass": "bonus",
 							"sid": 518697222312941
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 769014539688131,
+							"parameters": {
+								"audio-file": "bonusbullets",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 613533676266654
@@ -1623,6 +1700,17 @@
 							"id": "destroy",
 							"objectClass": "bonus",
 							"sid": 632359979854501
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 131325879988605,
+							"parameters": {
+								"audio-file": "bonusupgrade",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 926794632189432
@@ -1666,6 +1754,17 @@
 							"parameters": {
 								"instance-variable": "shells",
 								"value": "30"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 191130035431201,
+							"parameters": {
+								"audio-file": "bonusshells",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -1728,6 +1827,17 @@
 							"parameters": {
 								"instance-variable": "life",
 								"value": "10"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 955904305223598,
+							"parameters": {
+								"audio-file": "bonuslifes",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -1838,6 +1948,17 @@
 							"parameters": {
 								"frame-number": "1"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 639875459816275,
+							"parameters": {
+								"audio-file": "bonusupgrade",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 969341341165614
@@ -1873,6 +1994,17 @@
 							"sid": 899522745671530,
 							"parameters": {
 								"speed": "10"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 910336247812234,
+							"parameters": {
+								"audio-file": "checkpoint",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						},
 						{
@@ -2242,6 +2374,17 @@
 							"parameters": {
 								"range": "150"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 509065244783310,
+							"parameters": {
+								"audio-file": "select",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 902171066929787
@@ -2303,6 +2446,17 @@
 							"behaviorType": "Turret",
 							"parameters": {
 								"range": "500"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 818721533330815,
+							"parameters": {
+								"audio-file": "select",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -2589,6 +2743,17 @@
 								"instance-variable": "shells",
 								"value": "1"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 336928662698681,
+							"parameters": {
+								"audio-file": "shell",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 584412805375898
@@ -2706,6 +2871,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 533387654288304,
+							"parameters": {
+								"audio-file": "shell",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 859313461149755,
@@ -2766,6 +2942,17 @@
 							"parameters": {
 								"instance-variable": "coordinateY",
 								"value": "Mouse.Y"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 239982964077294,
+							"parameters": {
+								"audio-file": "shell",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -2844,6 +3031,17 @@
 							"id": "destroy",
 							"objectClass": "player_tank_shell",
 							"sid": 989317551761696
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 562001322505652,
+							"parameters": {
+								"audio-file": "empty",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 369047159651710
@@ -3146,6 +3344,17 @@
 								"height-type": "no",
 								"z": false
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 629094294840510,
+							"parameters": {
+								"audio-file": "shoot",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 779357402286185
@@ -3385,6 +3594,17 @@
 								"instance-variable": "grenades",
 								"value": "1"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 243796732625100,
+							"parameters": {
+								"audio-file": "grenade",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 969218546187638
@@ -3467,6 +3687,17 @@
 							"id": "destroy",
 							"objectClass": "player_grenade",
 							"sid": 540201500066211
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 429986687345755,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"type": "comment",
@@ -3687,6 +3918,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 270602979057375,
+							"parameters": {
+								"audio-file": "damage",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 171097989759871,
@@ -3863,6 +4105,17 @@
 								"image-point": "0",
 								"create-hierarchy": false
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 183836094050395,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 750075645260774
@@ -3946,6 +4199,28 @@
 							"parameters": {
 								"instance-variable": "state",
 								"value": "\"gameover\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 369741963279553,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 881824930590220,
+							"parameters": {
+								"audio-file": "mandestroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						},
 						{
@@ -4072,6 +4347,17 @@
 							"id": "destroy",
 							"objectClass": "enemy_bullet",
 							"sid": 371476393681839
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 835460496468242,
+							"parameters": {
+								"audio-file": "mandestroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 708207106936530
@@ -4118,6 +4404,17 @@
 							"parameters": {
 								"instance-variable": "state",
 								"value": "\"gameover\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 241048561668431,
+							"parameters": {
+								"audio-file": "mandestroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -4210,6 +4507,28 @@
 							"parameters": {
 								"instance-variable": "state",
 								"value": "\"gameover\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 435112162665890,
+							"parameters": {
+								"audio-file": "damage",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 694417889889559,
+							"parameters": {
+								"audio-file": "mandestroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -4311,6 +4630,28 @@
 							"parameters": {
 								"instance-variable": "state",
 								"value": "\"gameover\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 950461799994077,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 562458202141564,
+							"parameters": {
+								"audio-file": "mandestroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -4623,6 +4964,17 @@
 								"instance-variable": "coordinateY",
 								"value": "player_target.Y"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 416217832774348,
+							"parameters": {
+								"audio-file": "shoot",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 929944453018870
@@ -4821,6 +5173,17 @@
 							"id": "destroy",
 							"objectClass": "player_bullet",
 							"sid": 755642560048103
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 159742817916147,
+							"parameters": {
+								"audio-file": "mandestroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 886649707742490
@@ -4892,6 +5255,28 @@
 							"id": "destroy",
 							"objectClass": "enemi_soldier",
 							"sid": 128544384648886
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 909831546375637,
+							"parameters": {
+								"audio-file": "damage",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 763062208282044,
+							"parameters": {
+								"audio-file": "mandestroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 440073929909152
@@ -4936,6 +5321,28 @@
 							"id": "destroy",
 							"objectClass": "enemi_soldier",
 							"sid": 658101896389237
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 212259552576082,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 651433304779528,
+							"parameters": {
+								"audio-file": "mandestroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 717188094659627
@@ -5038,6 +5445,17 @@
 								"x": "player_target.X",
 								"y": "player_target.Y"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 632410095178006,
+							"parameters": {
+								"audio-file": "shell",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 577118689889887
@@ -5138,6 +5556,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 710622827823059,
+							"parameters": {
+								"audio-file": "shell",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 331357198990521,
@@ -5198,6 +5627,17 @@
 							"parameters": {
 								"instance-variable": "coordinateY",
 								"value": "player_target.Y"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 523917189555999,
+							"parameters": {
+								"audio-file": "shell",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -5296,6 +5736,17 @@
 							"id": "destroy",
 							"objectClass": "enemy_tank_shell",
 							"sid": 794178093678980
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 653631347924398,
+							"parameters": {
+								"audio-file": "empty",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 884846010562285
@@ -5540,6 +5991,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 890808177372614,
+							"parameters": {
+								"audio-file": "damage",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 384790055198445,
@@ -5620,6 +6082,17 @@
 								"image-point": "0",
 								"create-hierarchy": false
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 832996820279387,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 650211872196985
@@ -5688,6 +6161,17 @@
 							"id": "destroy",
 							"objectClass": "enemy_tank",
 							"sid": 410182318045724
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 234698972968214,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"type": "comment",
@@ -5898,6 +6382,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 229424804113609,
+							"parameters": {
+								"audio-file": "rocketmachine",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 554127961382058,
@@ -5992,6 +6487,17 @@
 							"parameters": {
 								"x": "player_target.X",
 								"y": "player_target.Y"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 978961638409648,
+							"parameters": {
+								"audio-file": "rocketmachine",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -6109,6 +6615,17 @@
 							"id": "destroy",
 							"objectClass": "enemy_rocket",
 							"sid": 356104042161804
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 690105977424621,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 913895544034201
@@ -6353,6 +6870,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 855460713528126,
+							"parameters": {
+								"audio-file": "damage",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 432637214039029,
@@ -6433,6 +6961,17 @@
 								"image-point": "0",
 								"create-hierarchy": false
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 447077503005145,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 782560562681124
@@ -6501,6 +7040,17 @@
 							"id": "destroy",
 							"objectClass": "enemy_rocket_machine",
 							"sid": 497787817552703
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 284599137019453,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"type": "comment",
@@ -6675,6 +7225,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 340587832418840,
+							"parameters": {
+								"audio-file": "turretshell",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 684684275948248,
@@ -6735,6 +7296,17 @@
 							"parameters": {
 								"instance-variable": "coordinateY",
 								"value": "player_target.Y"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 761138938937495,
+							"parameters": {
+								"audio-file": "turretshell",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -6858,6 +7430,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 366001885237719,
+							"parameters": {
+								"audio-file": "turretrocket",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 600014215704715,
@@ -6952,6 +7535,17 @@
 							"parameters": {
 								"x": "player_target.X",
 								"y": "player_target.Y"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 757761111418474,
+							"parameters": {
+								"audio-file": "turretrocket",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -7092,6 +7686,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 328895653606110,
+							"parameters": {
+								"audio-file": "damage",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 585510448936899,
@@ -7174,6 +7779,17 @@
 							"id": "destroy",
 							"objectClass": "enemy_turret",
 							"sid": 176648839175248
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 117681569957163,
+							"parameters": {
+								"audio-file": "destroy",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"type": "comment",
