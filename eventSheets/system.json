@@ -417,12 +417,40 @@
 							}
 						},
 						{
+							"type": "comment",
+							"text": "телепортируемся на следующий уровень"
+						},
+						{
 							"id": "scroll-to-object",
 							"objectClass": "System",
 							"sid": 471527792474698,
 							"parameters": {
 								"object": "tank_base"
 							}
+						},
+						{
+							"id": "regenerate-obstacle-map",
+							"objectClass": "enemi_soldier",
+							"sid": 763430969858145,
+							"behaviorType": "Pathfinding"
+						},
+						{
+							"id": "regenerate-obstacle-map",
+							"objectClass": "enemy_tank",
+							"sid": 396406938459247,
+							"behaviorType": "Pathfinding"
+						},
+						{
+							"id": "regenerate-obstacle-map",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 279403839770624,
+							"behaviorType": "Pathfinding"
+						},
+						{
+							"id": "regenerate-obstacle-map",
+							"objectClass": "enemy_rocket",
+							"sid": 189629356359092,
+							"behaviorType": "Pathfinding"
 						},
 						{
 							"type": "comment",
