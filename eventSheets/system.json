@@ -2047,6 +2047,34 @@
 						}
 					],
 					"sid": 492069193057886
+				},
+				{
+					"eventType": "comment",
+					"text": "ВЫХОД В МЕНЮ"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 560494269352105,
+							"parameters": {
+								"key": 27
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 253065465126856,
+							"parameters": {
+								"layout": "menu"
+							}
+						}
+					],
+					"sid": 698707071453327
 				}
 			],
 			"sid": 860028013614408

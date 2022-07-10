@@ -208,7 +208,8 @@
 			"Tilemap_ground2",
 			"boss",
 			"boss_gun",
-			"boss_track"
+			"boss_track",
+			"end_logo"
 		],
 		"subfolders": []
 	},
@@ -258,7 +259,8 @@
 		"items": [
 			"menu",
 			"level1",
-			"level2"
+			"level2",
+			"end"
 		],
 		"subfolders": []
 	},

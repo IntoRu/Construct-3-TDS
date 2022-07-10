@@ -117,6 +117,31 @@
 				}
 			],
 			"sid": 802669685320113
+		},
+		{
+			"eventType": "comment",
+			"text": "возвращаем курсор и врубаем музон"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 332540712327117
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 639042965563769,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				}
+			],
+			"sid": 508596330663901
 		}
 	],
 	"sid": 480983303725588
