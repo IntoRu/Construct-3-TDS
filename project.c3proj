@@ -165,7 +165,7 @@
 			"tank_base",
 			"Keyboard",
 			"player_tank_gun",
-			"payer_soldier",
+			"player_soldier",
 			"player_target",
 			"tank_track",
 			"player_bullet",
@@ -189,13 +189,21 @@
 			"enemy_tank_gun",
 			"enemy_tank_shell",
 			"enemy_tank_track",
-			"bonus",
 			"enemy_rocket_machine",
 			"enemy_rocket_machine_gun",
 			"enemy_rocket",
 			"smoke_rocket",
 			"enemy_rocket_machine_track",
-			"enemy_turret"
+			"enemy_turret",
+			"guipanel",
+			"player_soldier_destroy",
+			"buildings",
+			"buildings_shadow",
+			"explosive_objects",
+			"tree",
+			"tree_shadow",
+			"bonus",
+			"checkpoint"
 		],
 		"subfolders": []
 	},
@@ -212,6 +220,20 @@
 			"members": [
 				"enemy_rocket_machine",
 				"enemy_rocket_machine_gun"
+			],
+			"selectMode": "normal"
+		},
+		{
+			"members": [
+				"buildings",
+				"buildings_shadow"
+			],
+			"selectMode": "normal"
+		},
+		{
+			"members": [
+				"tree",
+				"tree_shadow"
 			],
 			"selectMode": "normal"
 		}

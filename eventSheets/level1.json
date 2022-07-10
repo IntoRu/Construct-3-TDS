@@ -3,7 +3,7 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "ugrade",
+			"name": "upgrade",
 			"type": "string",
 			"initialValue": "one",
 			"comment": "апгрейд танка",
@@ -95,7 +95,7 @@
 						},
 						{
 							"id": "set-angle-toward-position",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 676138287732692,
 							"parameters": {
 								"x": "Mouse.X",
@@ -207,6 +207,24 @@
 								"animation": "enemy_rocket_machine.state",
 								"from": "beginning"
 							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "plaer_tank_body",
+							"sid": 777096757311425,
+							"parameters": {
+								"animation": "tank_base.state",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "player_tank_gun",
+							"sid": 717653718618028,
+							"parameters": {
+								"animation": "upgrade&tank_base.state",
+								"from": "beginning"
+							}
 						}
 					],
 					"sid": 692327341258153
@@ -284,9 +302,1337 @@
 							"parameters": {
 								"target": "player_target"
 							}
+						},
+						{
+							"type": "comment",
+							"text": "тени от строений"
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "buildings_shadow",
+							"sid": 221775696263876,
+							"parameters": {
+								"animation": "buildings.AnimationName",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "buildings_shadow",
+							"sid": 844486689882078,
+							"parameters": {
+								"where": "behind",
+								"object": "buildings"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "buildings_shadow",
+							"sid": 230231095932085,
+							"parameters": {
+								"angle": "buildings.Angle"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "buildings_shadow",
+							"sid": 818269382835233,
+							"parameters": {
+								"x": "buildings.X+10",
+								"y": "buildings.Y+10"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "деревья"
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "tree",
+							"sid": 958836863359439,
+							"parameters": {
+								"angle": "random(360)"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "tree_shadow",
+							"sid": 473909045428548,
+							"parameters": {
+								"frame-number": "tree.AnimationFrame"
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "tree_shadow",
+							"sid": 528732747241925,
+							"parameters": {
+								"where": "behind",
+								"object": "tree"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "tree_shadow",
+							"sid": 418737847672103,
+							"parameters": {
+								"angle": "tree.Angle"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "tree_shadow",
+							"sid": 176056172931051,
+							"parameters": {
+								"x": "tree.X+10",
+								"y": "tree.Y+10"
+							}
 						}
 					],
 					"sid": 509598712672742
+				},
+				{
+					"eventType": "comment",
+					"text": "ГРАФИЧЕСКИЙ ИНТЕРФЕЙС"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Text",
+							"sid": 194072763184643,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"bullets\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 692185773315379,
+							"parameters": {
+								"text": "player_soldier.bullets"
+							}
+						}
+					],
+					"sid": 821121945649813
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Text",
+							"sid": 804308059920303,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"shells\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 554996687492698,
+							"parameters": {
+								"text": "tank_base.shells"
+							}
+						}
+					],
+					"sid": 603980842379794
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Text",
+							"sid": 305379748471589,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"grenades\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 573421351991537,
+							"parameters": {
+								"text": "player_soldier.grenades"
+							}
+						}
+					],
+					"sid": 690162785664326
+				},
+				{
+					"eventType": "comment",
+					"text": "разделения уровня жизней солдата и танка"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Text",
+							"sid": 485979722270481,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"lifes\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "guipanel",
+							"sid": 496317831255345,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"arrow\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tank_base",
+							"sid": 168060619302757,
+							"parameters": {
+								"instance-variable": "select",
+								"comparison": 0,
+								"value": "\"tank\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 384857826369377,
+							"parameters": {
+								"text": "tank_base.life"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "guipanel",
+							"sid": 859647844199484,
+							"parameters": {
+								"angle": "tank_base.life+160"
+							}
+						}
+					],
+					"sid": 674295714219521
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Text",
+							"sid": 862036681065248,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"lifes\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "guipanel",
+							"sid": 897532233343583,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"arrow\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tank_base",
+							"sid": 323850286195750,
+							"parameters": {
+								"instance-variable": "select",
+								"comparison": 0,
+								"value": "\"soldier\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 183641806161845,
+							"parameters": {
+								"text": "player_soldier.life"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "guipanel",
+							"sid": 886480781082922,
+							"parameters": {
+								"angle": "player_soldier.life+160"
+							}
+						}
+					],
+					"sid": 165674092439681
+				},
+				{
+					"eventType": "comment",
+					"text": "разрушение построек"
+				},
+				{
+					"eventType": "comment",
+					"text": "от пули"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_bullet",
+							"sid": 351912061586543,
+							"parameters": {
+								"object": "buildings"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "buildings",
+							"sid": 758351825914356,
+							"parameters": {
+								"instance-variable": "state",
+								"comparison": 0,
+								"value": "\"normal\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "buildings",
+							"sid": 797812745975295,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "buildings",
+							"sid": 128051557588211,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_bullet",
+							"sid": 870181381905605
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 123161971682121,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "buildings",
+							"sid": 726381737462883,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 295647629110487
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemy_bullet",
+							"sid": 253907725382388,
+							"parameters": {
+								"object": "buildings"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "buildings",
+							"sid": 904620424678824,
+							"parameters": {
+								"instance-variable": "state",
+								"comparison": 0,
+								"value": "\"normal\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "buildings",
+							"sid": 170839265503384,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "buildings",
+							"sid": 983292280803168,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_bullet",
+							"sid": 121045121921457
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 404998359028146,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "buildings",
+							"sid": 671494905444599,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 169069250665003
+				},
+				{
+					"eventType": "comment",
+					"text": "от танкового снаряда"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_tank_shell",
+							"sid": 529310537568553,
+							"parameters": {
+								"object": "buildings"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "buildings",
+							"sid": 167874429708142,
+							"parameters": {
+								"instance-variable": "state",
+								"comparison": 0,
+								"value": "\"normal\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "buildings",
+							"sid": 836743993618090,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "10"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "buildings",
+							"sid": 324768413994621,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_tank_shell",
+							"sid": 395684618603861,
+							"parameters": {
+								"object": "damage",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_tank_shell",
+							"sid": 716270431873024
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 526150623608734,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "buildings",
+							"sid": 274714330831506,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 402576920648210
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemy_tank_shell",
+							"sid": 131549769322217,
+							"parameters": {
+								"object": "buildings"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "buildings",
+							"sid": 955590567784921,
+							"parameters": {
+								"instance-variable": "state",
+								"comparison": 0,
+								"value": "\"normal\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "buildings",
+							"sid": 328634161365577,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "10"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "buildings",
+							"sid": 610246288836811,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank_shell",
+							"sid": 766149920902219,
+							"parameters": {
+								"object": "damage",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_tank_shell",
+							"sid": 339606396946649
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 916266995996649,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "buildings",
+							"sid": 341286388102222,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 501967056190065
+				},
+				{
+					"eventType": "comment",
+					"text": "от ракет"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 439171788013330,
+							"parameters": {
+								"object": "buildings"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "buildings",
+							"sid": 743057054348954,
+							"parameters": {
+								"instance-variable": "state",
+								"comparison": 0,
+								"value": "\"normal\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "buildings",
+							"sid": 177008479759244,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "20"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "buildings",
+							"sid": 586474963458284,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 205676872927324,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 474471598453059,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_rocket",
+							"sid": 736213788051133
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 167644835352873,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "buildings",
+							"sid": 910612942245608,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 155257053806961
+				},
+				{
+					"eventType": "comment",
+					"text": "от гранат"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_grenade_radius",
+							"sid": 270336087187659,
+							"parameters": {
+								"object": "buildings"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "buildings",
+							"sid": 463556445772072,
+							"parameters": {
+								"instance-variable": "state",
+								"comparison": 0,
+								"value": "\"normal\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "buildings",
+							"sid": 127804004231875,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "smoke2",
+							"sid": 835908343434078,
+							"parameters": {
+								"speed": "100"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "smoke2",
+							"sid": 404972597065675,
+							"parameters": {
+								"size": "60"
+							}
+						},
+						{
+							"id": "set-rate",
+							"objectClass": "smoke2",
+							"sid": 622162605048204,
+							"parameters": {
+								"rate": "100"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "buildings",
+							"sid": 841322735747398,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "destroy",
+							"sid": 992646503708608,
+							"parameters": {
+								"width": "buildings.Width*2",
+								"height": "buildings.Height*2"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "buildings",
+							"sid": 841903514797302,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"damage\""
+							}
+						}
+					],
+					"sid": 308674170228513
+				},
+				{
+					"eventType": "comment",
+					"text": "если нет жизней"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "buildings",
+							"sid": 409096951494028,
+							"parameters": {
+								"instance-variable": "life",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "buildings",
+							"sid": 226875012406992,
+							"parameters": {
+								"instance-variable": "state",
+								"comparison": 0,
+								"value": "\"normal\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "buildings",
+							"sid": 857462447598297,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "smoke2",
+							"sid": 669208795550988,
+							"parameters": {
+								"speed": "100"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "smoke2",
+							"sid": 756065740423123,
+							"parameters": {
+								"size": "60"
+							}
+						},
+						{
+							"id": "set-rate",
+							"objectClass": "smoke2",
+							"sid": 196342329376683,
+							"parameters": {
+								"rate": "100"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "buildings",
+							"sid": 987901056140724,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "destroy",
+							"sid": 766175904675663,
+							"parameters": {
+								"width": "buildings.Width*2",
+								"height": "buildings.Height*2"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "buildings",
+							"sid": 436795043977217,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"damage\""
+							}
+						}
+					],
+					"sid": 602107698246628
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "buildings",
+							"sid": 147389426508528,
+							"parameters": {
+								"instance-variable": "state",
+								"comparison": 0,
+								"value": "\"damage\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "buildings",
+							"sid": 403769672313180,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 774702800865453
+				},
+				{
+					"eventType": "comment",
+					"text": "Склад боеприпасов и Бочки с горючим"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_bullet",
+							"sid": 924817289309762,
+							"parameters": {
+								"object": "explosive_objects"
+							}
+						},
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_tank_shell",
+							"sid": 491222689361525,
+							"parameters": {
+								"object": "explosive_objects"
+							}
+						},
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_grenade_radius",
+							"sid": 163405748077368,
+							"parameters": {
+								"object": "explosive_objects"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "explosive_objects",
+							"sid": 489652241417605,
+							"parameters": {
+								"object": "player_grenade_radius",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "explosive_objects",
+							"sid": 819218040406207
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_grenade_radius",
+							"sid": 598222605164022,
+							"parameters": {
+								"object": "funnel",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_grenade_radius",
+							"sid": 768355928005270,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_grenade_radius",
+							"sid": 755612650271417,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 827590211675326,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "comment",
+					"text": "БОНУСЫ"
+				},
+				{
+					"eventType": "comment",
+					"text": "Бонус, прибавляющий Патроны"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_target",
+							"sid": 493711076280511,
+							"parameters": {
+								"object": "bonus"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "bonus",
+							"sid": 763220923067556,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"bullets\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "player_soldier",
+							"sid": 805084864389729,
+							"parameters": {
+								"instance-variable": "bullets",
+								"value": "50"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "bonus",
+							"sid": 518697222312941
+						}
+					],
+					"sid": 613533676266654
+				},
+				{
+					"eventType": "comment",
+					"text": "Бонус, прибавляющий гранаты"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_target",
+							"sid": 383450941991031,
+							"parameters": {
+								"object": "bonus"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "bonus",
+							"sid": 195808796591889,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"grenades\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "player_soldier",
+							"sid": 388124272283514,
+							"parameters": {
+								"instance-variable": "grenades",
+								"value": "5"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "bonus",
+							"sid": 632359979854501
+						}
+					],
+					"sid": 926794632189432
+				},
+				{
+					"eventType": "comment",
+					"text": "Бонус, прибавляющий снаряды"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_target",
+							"sid": 504258592477849,
+							"parameters": {
+								"object": "bonus"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "bonus",
+							"sid": 987548473668930,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"shells\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "bonus",
+							"sid": 693638893944553
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "tank_base",
+							"sid": 560954029546013,
+							"parameters": {
+								"instance-variable": "shells",
+								"value": "30"
+							}
+						}
+					],
+					"sid": 141682178743539
+				},
+				{
+					"eventType": "comment",
+					"text": "Бонус, прибавляющий снаряды"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_target",
+							"sid": 216258719731809,
+							"parameters": {
+								"object": "bonus"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "bonus",
+							"sid": 585459968121570,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"lifes\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "bonus",
+							"sid": 223452618228922
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "tank_base",
+							"sid": 958680968068479,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "50"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "tank_base",
+							"sid": 597665607217962,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"normal\""
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "player_soldier",
+							"sid": 230000377434628,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "10"
+							}
+						}
+					],
+					"sid": 858810888359291
+				},
+				{
+					"eventType": "comment",
+					"text": "Бонус апгрейда (сделал временным)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_target",
+							"sid": 235145701863564,
+							"parameters": {
+								"object": "bonus"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "bonus",
+							"sid": 630823019792303,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"upgrade\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "guipanel",
+							"sid": 317835197624539,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"upgrade\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 315761863573538,
+							"parameters": {
+								"variable": "upgrade",
+								"value": "\"two\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 664672365886894,
+							"parameters": {
+								"variable": "rotate_speed_gun",
+								"value": "5"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "guipanel",
+							"sid": 384511866946425,
+							"parameters": {
+								"frame-number": "2"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "bonus",
+							"sid": 270692550873869
+						},
+						{
+							"type": "comment",
+							"text": "временно"
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 586326039746268,
+							"parameters": {
+								"seconds": "20"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 446131386771126,
+							"parameters": {
+								"variable": "upgrade",
+								"value": "\"one\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 290015193546724,
+							"parameters": {
+								"variable": "rotate_speed_gun",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "guipanel",
+							"sid": 980000632216858,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 969341341165614
+				},
+				{
+					"eventType": "comment",
+					"text": "ЧЕКПОИНТ"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_target",
+							"sid": 730303044605100,
+							"parameters": {
+								"object": "checkpoint"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "save",
+							"objectClass": "System",
+							"sid": 125562024557240,
+							"parameters": {
+								"slot": "\"mysave\""
+							}
+						},
+						{
+							"id": "set-animation-speed",
+							"objectClass": "checkpoint",
+							"sid": 899522745671530,
+							"parameters": {
+								"speed": "10"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 819341409470115,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-animation-speed",
+							"objectClass": "checkpoint",
+							"sid": 126343536810098,
+							"parameters": {
+								"speed": "0"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "checkpoint",
+							"sid": 949745352659434,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 735112135748018
 				}
 			],
 			"sid": 860028013614408
@@ -307,7 +1653,7 @@
 					"conditions": [
 						{
 							"id": "is-moving",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 180203957979482,
 							"behaviorType": "8Direction"
 						},
@@ -335,7 +1681,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 520406993911140,
 							"parameters": {
 								"animation": "\"move\"",
@@ -383,7 +1729,7 @@
 						},
 						{
 							"id": "set-position-to-another-object",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 867661391055065,
 							"parameters": {
 								"object": "plaer_tank_body",
@@ -392,10 +1738,41 @@
 						},
 						{
 							"id": "set-visible",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 961586602276267,
 							"parameters": {
 								"visibility": "visible"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "стелс солдата"
+						},
+						{
+							"id": "set-range",
+							"objectClass": "enemy_tank_gun",
+							"sid": 816202081974256,
+							"behaviorType": "Turret",
+							"parameters": {
+								"range": "150"
+							}
+						},
+						{
+							"id": "set-range",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 386868818669706,
+							"behaviorType": "Turret",
+							"parameters": {
+								"range": "150"
+							}
+						},
+						{
+							"id": "set-range",
+							"objectClass": "enemy_turret",
+							"sid": 212501243219510,
+							"behaviorType": "Turret",
+							"parameters": {
+								"range": "150"
 							}
 						}
 					],
@@ -406,7 +1783,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 824244307292626,
 							"parameters": {
 								"object": "tank_base"
@@ -431,6 +1808,33 @@
 							"parameters": {
 								"instance-variable": "select",
 								"value": "\"tank\""
+							}
+						},
+						{
+							"id": "set-range",
+							"objectClass": "enemy_tank_gun",
+							"sid": 354784063561546,
+							"behaviorType": "Turret",
+							"parameters": {
+								"range": "400"
+							}
+						},
+						{
+							"id": "set-range",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 173994521002270,
+							"behaviorType": "Turret",
+							"parameters": {
+								"range": "500"
+							}
+						},
+						{
+							"id": "set-range",
+							"objectClass": "enemy_turret",
+							"sid": 194762997050797,
+							"behaviorType": "Turret",
+							"parameters": {
+								"range": "500"
 							}
 						}
 					],
@@ -476,7 +1880,7 @@
 						},
 						{
 							"id": "set-enabled",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 501463135802864,
 							"behaviorType": "8Direction",
 							"parameters": {
@@ -485,7 +1889,7 @@
 						},
 						{
 							"id": "set-position-to-another-object",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 262209483220963,
 							"parameters": {
 								"object": "plaer_tank_body",
@@ -534,7 +1938,7 @@
 						},
 						{
 							"id": "set-enabled",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 116923349810509,
 							"behaviorType": "8Direction",
 							"parameters": {
@@ -546,7 +1950,7 @@
 							"objectClass": "player_target",
 							"sid": 963312543045289,
 							"parameters": {
-								"object": "payer_soldier",
+								"object": "player_soldier",
 								"image-point-optional": "0"
 							}
 						}
@@ -629,7 +2033,7 @@
 							"objectClass": "System",
 							"sid": 639373903385215,
 							"parameters": {
-								"variable": "ugrade",
+								"variable": "upgrade",
 								"comparison": 0,
 								"value": "\"one\""
 							}
@@ -752,7 +2156,7 @@
 							"objectClass": "System",
 							"sid": 590066038202977,
 							"parameters": {
-								"variable": "ugrade",
+								"variable": "upgrade",
 								"comparison": 0,
 								"value": "\"two\""
 							}
@@ -1011,7 +2415,7 @@
 						},
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 846036123599766,
 							"parameters": {
 								"instance-variable": "bullets",
@@ -1023,7 +2427,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 594052960941388,
 							"parameters": {
 								"animation": "\"fire\"",
@@ -1032,7 +2436,7 @@
 						},
 						{
 							"id": "set-visible",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 934380575829735,
 							"parameters": {
 								"visibility": "visible"
@@ -1040,7 +2444,7 @@
 						},
 						{
 							"id": "spawn-another-object",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 383791102650741,
 							"parameters": {
 								"object": "player_bullet",
@@ -1051,7 +2455,7 @@
 						},
 						{
 							"id": "subtract-from-instvar",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 667519241179374,
 							"parameters": {
 								"instance-variable": "bullets",
@@ -1082,7 +2486,7 @@
 						},
 						{
 							"id": "spawn-another-object",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 745114680021679,
 							"parameters": {
 								"object": "plaer_bullet_explosion",
@@ -1097,7 +2501,7 @@
 							"sid": 371046305222866,
 							"behaviorType": "Pin",
 							"parameters": {
-								"pin-to": "payer_soldier",
+								"pin-to": "player_soldier",
 								"x": true,
 								"y": true,
 								"angle": true,
@@ -1135,7 +2539,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 473266502005971,
 							"parameters": {
 								"animation": "\"normal\"",
@@ -1144,7 +2548,7 @@
 						},
 						{
 							"id": "set-visible",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 913937287347474,
 							"parameters": {
 								"visibility": "invisible"
@@ -1188,7 +2592,7 @@
 						},
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 700917199432210,
 							"parameters": {
 								"instance-variable": "bullets",
@@ -1200,7 +2604,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 822686363881318,
 							"parameters": {
 								"animation": "\"move-faer\"",
@@ -1209,7 +2613,7 @@
 						},
 						{
 							"id": "spawn-another-object",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 424800721711910,
 							"parameters": {
 								"object": "player_bullet",
@@ -1220,7 +2624,7 @@
 						},
 						{
 							"id": "subtract-from-instvar",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 882602539006497,
 							"parameters": {
 								"instance-variable": "bullets",
@@ -1251,7 +2655,7 @@
 						},
 						{
 							"id": "spawn-another-object",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 787781495599264,
 							"parameters": {
 								"object": "plaer_bullet_explosion",
@@ -1266,7 +2670,7 @@
 							"sid": 883696025044023,
 							"behaviorType": "Pin",
 							"parameters": {
-								"pin-to": "payer_soldier",
+								"pin-to": "player_soldier",
 								"x": true,
 								"y": true,
 								"angle": true,
@@ -1313,7 +2717,7 @@
 						},
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 229094775945612,
 							"parameters": {
 								"instance-variable": "bullets",
@@ -1323,7 +2727,7 @@
 						},
 						{
 							"id": "is-moving",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 384227138924950,
 							"behaviorType": "8Direction",
 							"isInverted": true
@@ -1332,7 +2736,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 262187425482994,
 							"parameters": {
 								"animation": "\"fire\"",
@@ -1341,7 +2745,7 @@
 						},
 						{
 							"id": "spawn-another-object",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 803657232141116,
 							"parameters": {
 								"object": "player_bullet",
@@ -1352,7 +2756,7 @@
 						},
 						{
 							"id": "subtract-from-instvar",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 209207983010271,
 							"parameters": {
 								"instance-variable": "bullets",
@@ -1383,7 +2787,7 @@
 						},
 						{
 							"id": "spawn-another-object",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 659915540690276,
 							"parameters": {
 								"object": "plaer_bullet_explosion",
@@ -1398,7 +2802,7 @@
 							"sid": 429352703261928,
 							"behaviorType": "Pin",
 							"parameters": {
-								"pin-to": "payer_soldier",
+								"pin-to": "player_soldier",
 								"x": true,
 								"y": true,
 								"angle": true,
@@ -1484,7 +2888,7 @@
 						},
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 351579775074518,
 							"parameters": {
 								"instance-variable": "grenades",
@@ -1496,7 +2900,7 @@
 					"actions": [
 						{
 							"id": "spawn-another-object",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 210329787571761,
 							"parameters": {
 								"object": "player_grenade",
@@ -1507,7 +2911,7 @@
 						},
 						{
 							"id": "subtract-from-instvar",
-							"objectClass": "payer_soldier",
+							"objectClass": "player_soldier",
 							"sid": 557379134056679,
 							"parameters": {
 								"instance-variable": "grenades",
@@ -1679,6 +3083,768 @@
 						}
 					],
 					"sid": 965060630811322
+				},
+				{
+					"eventType": "comment",
+					"text": "Повреждение Танка от вражеских Пуль"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemy_bullet",
+							"sid": 818388950402024,
+							"parameters": {
+								"object": "tank_base"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "enemy_bullet",
+							"sid": 390879527403512
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "tank_base",
+							"sid": 648722680820315,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "plaer_tank_body",
+							"sid": 583525087719918,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "player_tank_gun",
+							"sid": 336661675425774,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 406587441962859,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "plaer_tank_body",
+							"sid": 376693834257930,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "player_tank_gun",
+							"sid": 741977520909087,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 340009251238131,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Повреждение Танка от вражеских снарядов"
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemy_tank_shell",
+							"sid": 786857673337382,
+							"parameters": {
+								"object": "tank_base"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank_shell",
+							"sid": 344291279380262,
+							"parameters": {
+								"object": "damage",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_bullet",
+							"sid": 379097178303600
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "tank_base",
+							"sid": 413902773034581,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "10"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "plaer_tank_body",
+							"sid": 732025904132473,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "player_tank_gun",
+							"sid": 240018363486957,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 171097989759871,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "plaer_tank_body",
+							"sid": 348524626391471,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "player_tank_gun",
+							"sid": 462518217808985,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 747418920702126
+				},
+				{
+					"eventType": "comment",
+					"text": "Повреждение Танка от вражеских ракет"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 931260197632587,
+							"parameters": {
+								"object": "tank_base"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 760465027704107,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 743867001529850,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_rocket",
+							"sid": 313541195845620
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "tank_base",
+							"sid": 382305718381888,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "20"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "plaer_tank_body",
+							"sid": 729486173456438,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "player_tank_gun",
+							"sid": 653605227483722,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 235393762230961,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "plaer_tank_body",
+							"sid": 597862596113459,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "player_tank_gun",
+							"sid": 473277639181132,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 662449081448513
+				},
+				{
+					"eventType": "comment",
+					"text": "Если жизней меньше или равно 50, то Танк игрока поврежден"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tank_base",
+							"sid": 186929463644943,
+							"parameters": {
+								"instance-variable": "life",
+								"comparison": 2,
+								"value": "50"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 562484515477940
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "tank_base",
+							"sid": 330862158961920,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"damage\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "tank_base",
+							"sid": 658643986245158,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "tank_base",
+							"sid": 665057162408739,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 750075645260774
+				},
+				{
+					"eventType": "comment",
+					"text": "Если жизней меньше или равно 0, то Танк и Солдат игрока - уничтожаются"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tank_base",
+							"sid": 908569202595188,
+							"parameters": {
+								"instance-variable": "life",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "tank_base",
+							"sid": 447794301139652,
+							"parameters": {
+								"object": "funnel",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "tank_base",
+							"sid": 815192007808155,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "tank_base",
+							"sid": 953500927067495,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "tank_base",
+							"sid": 686482202228027
+						},
+						{
+							"id": "destroy",
+							"objectClass": "plaer_tank_body",
+							"sid": 407742533624698
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_tank_gun",
+							"sid": 220147559740030
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_soldier",
+							"sid": 372035279418256
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "player_target",
+							"sid": 561452254207547,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"gameover\""
+							}
+						}
+					],
+					"sid": 302535824337269
+				},
+				{
+					"eventType": "comment",
+					"text": "Повреждение Солдата от вражеских Пуль"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemy_bullet",
+							"sid": 507856144703592,
+							"parameters": {
+								"object": "player_soldier"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tank_base",
+							"sid": 904098424034880,
+							"parameters": {
+								"instance-variable": "select",
+								"comparison": 0,
+								"value": "\"soldier\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "player_soldier",
+							"sid": 988022496067305,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_bullet",
+							"sid": 371476393681839
+						}
+					],
+					"sid": 708207106936530
+				},
+				{
+					"eventType": "comment",
+					"text": "Уничтожение Солдата, если жизней 0"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "player_soldier",
+							"sid": 941369628235566,
+							"parameters": {
+								"instance-variable": "life",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_soldier",
+							"sid": 696491082908477,
+							"parameters": {
+								"object": "player_soldier_destroy",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_soldier",
+							"sid": 485678396573161
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "player_target",
+							"sid": 922415864064513,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"gameover\""
+							}
+						}
+					],
+					"sid": 344468443588252,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Уничтожение Солдата от вражеских Снарядов"
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemy_tank_shell",
+							"sid": 866690124391519,
+							"parameters": {
+								"object": "player_soldier"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tank_base",
+							"sid": 732450037401075,
+							"parameters": {
+								"instance-variable": "select",
+								"comparison": 0,
+								"value": "\"soldier\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank_shell",
+							"sid": 107041570669490,
+							"parameters": {
+								"object": "funnel",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank_shell",
+							"sid": 472778046671945,
+							"parameters": {
+								"object": "damage",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_tank_shell",
+							"sid": 879507310741250
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_soldier",
+							"sid": 766638597455575,
+							"parameters": {
+								"object": "player_soldier_destroy",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "player_soldier_destroy",
+							"sid": 466167008156896,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_soldier",
+							"sid": 489904702050706
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "player_target",
+							"sid": 955459633051414,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"gameover\""
+							}
+						}
+					],
+					"sid": 964246737675579
+				},
+				{
+					"eventType": "comment",
+					"text": "Уничтожение Солдата от вражеских Ракет"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 675285557178748,
+							"parameters": {
+								"object": "player_soldier"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tank_base",
+							"sid": 332414247702090,
+							"parameters": {
+								"instance-variable": "select",
+								"comparison": 0,
+								"value": "\"soldier\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 549127864255907,
+							"parameters": {
+								"object": "funnel",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 325832661460145,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 684734440558296,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_rocket",
+							"sid": 995837249706296
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_soldier",
+							"sid": 421300931796848,
+							"parameters": {
+								"object": "player_soldier_destroy",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "player_soldier_destroy",
+							"sid": 426773776709863,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_soldier",
+							"sid": 553265296334684
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "player_target",
+							"sid": 518442584556130,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"gameover\""
+							}
+						}
+					],
+					"sid": 258186302966604
+				},
+				{
+					"eventType": "comment",
+					"text": "Прекращение вражеского огня после нашей смерти "
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "player_target",
+							"sid": 735015597520462,
+							"parameters": {
+								"instance-variable": "state",
+								"comparison": 0,
+								"value": "\"gameover\""
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 801923819801931
+						}
+					],
+					"actions": [
+						{
+							"id": "set-range",
+							"objectClass": "enemi_soldier",
+							"sid": 907237863664083,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"range": "0"
+							}
+						},
+						{
+							"id": "set-animation-speed",
+							"objectClass": "enemi_soldier",
+							"sid": 981917648956009,
+							"parameters": {
+								"speed": "0"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "enemy_tank_gun",
+							"sid": 362472590080993,
+							"behaviorType": "Turret",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 494973217714476,
+							"behaviorType": "Turret",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "enemy_turret",
+							"sid": 979001502476816,
+							"behaviorType": "Turret",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 249558454348595,
+							"parameters": {
+								"text": "0"
+							}
+						}
+					],
+					"sid": 379109834466021
 				}
 			],
 			"sid": 263582058583386
@@ -4265,67 +6431,6 @@
 				}
 			],
 			"sid": 981664390292295
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Бонусы",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "comment",
-					"text": "test получения бонусов"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "plaer_tank_body",
-							"sid": 391114654025052,
-							"parameters": {
-								"object": "bonus"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 196836125148124,
-							"parameters": {
-								"variable": "rotate_speed_gun",
-								"value": "5"
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "bonus",
-							"sid": 727096809425661
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 799390932143146,
-							"parameters": {
-								"seconds": "10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 891657751914027,
-							"parameters": {
-								"variable": "rotate_speed_gun",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 227271767262148
-				}
-			],
-			"sid": 105621891492882
 		}
 	],
 	"sid": 421239294399193
