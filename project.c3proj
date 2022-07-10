@@ -203,7 +203,8 @@
 			"tree",
 			"tree_shadow",
 			"bonus",
-			"checkpoint"
+			"checkpoint",
+			"guiblack"
 		],
 		"subfolders": []
 	},

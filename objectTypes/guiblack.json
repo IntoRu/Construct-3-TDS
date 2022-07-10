@@ -1,0 +1,31 @@
+{
+	"name": "guiblack",
+	"plugin-id": "TiledBg",
+	"sid": 891584191298711,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 525239346196280
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade2",
+			"sid": 743501757642144
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 16,
+		"height": 16,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8618670,
+		"useCollisionPoly": true
+	}
+}

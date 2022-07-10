@@ -387,6 +387,32 @@
 								"x": "tree.X+10",
 								"y": "tree.Y+10"
 							}
+						},
+						{
+							"type": "comment",
+							"text": "сохранение игры"
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 695025361131217,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "save",
+							"objectClass": "System",
+							"sid": 880256493478947,
+							"parameters": {
+								"slot": "\"mysave\""
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "guiblack",
+							"sid": 930566254503593,
+							"behaviorType": "Fade"
 						}
 					],
 					"sid": 509598712672742
@@ -3841,6 +3867,40 @@
 							"sid": 249558454348595,
 							"parameters": {
 								"text": "0"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "занавес"
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 984140468251603,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "guiblack",
+							"sid": 167628588160989,
+							"behaviorType": "Fade2"
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 310930747369399,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "load",
+							"objectClass": "System",
+							"sid": 542314661305818,
+							"parameters": {
+								"slot": "\"mysave\""
 							}
 						}
 					],
