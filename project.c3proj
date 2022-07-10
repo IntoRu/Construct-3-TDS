@@ -204,7 +204,11 @@
 			"tree_shadow",
 			"bonus",
 			"checkpoint",
-			"guiblack"
+			"guiblack",
+			"Tilemap_ground2",
+			"boss",
+			"boss_gun",
+			"boss_track"
 		],
 		"subfolders": []
 	},
@@ -237,6 +241,13 @@
 				"tree_shadow"
 			],
 			"selectMode": "normal"
+		},
+		{
+			"members": [
+				"boss",
+				"boss_gun"
+			],
+			"selectMode": "normal"
 		}
 	],
 	"families": {
@@ -246,14 +257,15 @@
 	"layouts": {
 		"items": [
 			"menu",
-			"level1"
+			"level1",
+			"level2"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"menu",
-			"level1"
+			"system"
 		],
 		"subfolders": []
 	},

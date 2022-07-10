@@ -1,5 +1,5 @@
 {
-	"name": "level1",
+	"name": "system",
 	"events": [
 		{
 			"eventType": "variable",
@@ -386,6 +386,42 @@
 							"parameters": {
 								"x": "tree.X+10",
 								"y": "tree.Y+10"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "босс"
+						},
+						{
+							"id": "add-object-to-target",
+							"objectClass": "boss_gun",
+							"sid": 718069442339318,
+							"behaviorType": "Turret",
+							"parameters": {
+								"target": "player_target"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "boss_gun",
+							"sid": 221334479634241,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "boss",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "scroll-to-object",
+							"objectClass": "System",
+							"sid": 471527792474698,
+							"parameters": {
+								"object": "tank_base"
 							}
 						},
 						{
@@ -1659,6 +1695,168 @@
 						}
 					],
 					"sid": 735112135748018
+				},
+				{
+					"eventType": "comment",
+					"text": "Завершение Миссии - переход на новый уровень"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 954575739398055,
+							"parameters": {
+								"first-value": "enemi_soldier.Count",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 186294408839024,
+							"parameters": {
+								"first-value": "enemy_tank.Count",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 737225102087369,
+							"parameters": {
+								"first-value": "enemy_rocket_machine.Count",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 226102849541081,
+							"parameters": {
+								"first-value": "enemy_turret.Count",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 938103217874323
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "boss",
+							"sid": 321362753796276,
+							"parameters": {
+								"object": "funnel",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "boss",
+							"sid": 869715392190004,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "smoke2",
+							"sid": 515540713899668,
+							"parameters": {
+								"speed": "100"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "smoke2",
+							"sid": 125427881341170,
+							"parameters": {
+								"size": "60"
+							}
+						},
+						{
+							"id": "set-rate",
+							"objectClass": "smoke2",
+							"sid": 926629409433080,
+							"parameters": {
+								"rate": "100"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "boss",
+							"sid": 845167101423040,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "destroy",
+							"sid": 415872661613714,
+							"parameters": {
+								"scale": "2"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "boss",
+							"sid": 726396949425388
+						},
+						{
+							"id": "destroy",
+							"objectClass": "boss_gun",
+							"sid": 623781831707007
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 675350163906940,
+							"parameters": {
+								"seconds": "3"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "guiblack",
+							"sid": 896956951102653,
+							"behaviorType": "Fade2"
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 157574620088066,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 127291271788867,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 492069193057886
 				}
 			],
 			"sid": 860028013614408
@@ -6488,6 +6686,155 @@
 					],
 					"sid": 873001513311688,
 					"isOrBlock": true
+				},
+				{
+					"eventType": "comment",
+					"text": "БОСС"
+				},
+				{
+					"eventType": "comment",
+					"text": "Прикрепляем турели к Корпусу Босса"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "boss",
+							"sid": 372817518082308
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "enemy_turret",
+							"sid": 632006827219769,
+							"parameters": {
+								"animation": "\"shell\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "enemy_turret",
+							"sid": 178681482528410,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "boss",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 577957059545682
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "boss",
+							"sid": 295282279355361
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "enemy_turret",
+							"sid": 570854482740770,
+							"parameters": {
+								"animation": "\"rocket\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "enemy_turret",
+							"sid": 484838576606617,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "boss_gun",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 146052356923807
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-outside-layout",
+							"objectClass": "boss",
+							"sid": 316342038023236
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 718133812693127,
+							"parameters": {
+								"interval-seconds": "1.6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "boss_gun",
+							"sid": 973096651571094,
+							"parameters": {
+								"object": "enemy_tank_shell",
+								"layer": "\"character\"",
+								"image-point": "\"fire\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "enemy_tank_shell",
+							"sid": 431871837647878,
+							"parameters": {
+								"scale": "2"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_tank_shell",
+							"sid": 366455703755376,
+							"parameters": {
+								"instance-variable": "coordinateX",
+								"value": "player_target.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_tank_shell",
+							"sid": 605263328728042,
+							"parameters": {
+								"instance-variable": "coordinateY",
+								"value": "player_target.Y"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "boss",
+							"sid": 527770319699061,
+							"parameters": {
+								"object": "boss_track",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 363293285563449
 				}
 			],
 			"sid": 981664390292295

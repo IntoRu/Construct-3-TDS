@@ -1,0 +1,67 @@
+{
+	"name": "boss_gun",
+	"plugin-id": "Sprite",
+	"sid": 904861636042502,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Turret",
+			"name": "Turret",
+			"sid": 618174763177444
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 859360243583981
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 152,
+						"height": 106,
+						"originX": 0.32894736842105265,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 462458,
+						"collisionPoly": {
+							"points": [
+								0.05263157894736843,
+								0.15094339622641512,
+								1,
+								0.15094339622641512,
+								1,
+								0.8490566037735849,
+								0.05263157894736843,
+								0.8490566037735849
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "fire",
+								"x": 0.9276315789473685,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 796230327037347,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
