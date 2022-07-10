@@ -1241,6 +1241,87 @@
 								"instance-variable": "state",
 								"value": "\"damage\""
 							}
+						},
+						{
+							"type": "comment",
+							"text": "тряска при взрыве"
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 170944382691569,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 538471804153923,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 965447211668232,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 495796957802433,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 121255123108528,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 434523438845924,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 497387969385373,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 853531811494912,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 480396869457571,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
 						}
 					],
 					"sid": 602107698246628
@@ -1351,6 +1432,87 @@
 								"layer": "\"character\"",
 								"image-point": "0",
 								"create-hierarchy": false
+							}
+						},
+						{
+							"type": "comment",
+							"text": "тряска при взрыве"
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 153696455198141,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 397547512573792,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 435991249432156,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 519225948438603,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 285913007451503,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 734700887380056,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 732740688257001,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 891780114359385,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 945775280597203,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
 							}
 						}
 					],
@@ -3731,6 +3893,87 @@
 								"instance-variable": "state",
 								"value": "\"gameover\""
 							}
+						},
+						{
+							"type": "comment",
+							"text": "тряска при взрыве"
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 765505218628657,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 251874838110483,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 153878416408418,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 834776234381551,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 755234920453908,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 576445289470030,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 740406355777230,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 616841440676907,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 603660873162597,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
 						}
 					],
 					"sid": 302535824337269
@@ -5386,6 +5629,87 @@
 							"id": "destroy",
 							"objectClass": "enemy_tank",
 							"sid": 410182318045724
+						},
+						{
+							"type": "comment",
+							"text": "тряска при взрыве"
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 297732316838474,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 652008472618995,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 807672257664308,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 276586314875493,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 572552025990743,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 278412504675862,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 105475334967150,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 261097114502870,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 529706316050257,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
 						}
 					],
 					"sid": 542296729092647,
@@ -6118,6 +6442,87 @@
 							"id": "destroy",
 							"objectClass": "enemy_rocket_machine",
 							"sid": 497787817552703
+						},
+						{
+							"type": "comment",
+							"text": "тряска при взрыве"
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 529748169364770,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 796760537719267,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 146101675364319,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 507328711640436,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 422637781430099,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 972575369621439,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 797563018765917,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 156124307035931,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 931929152637525,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
 						}
 					],
 					"sid": 938960743519160,
@@ -6710,6 +7115,87 @@
 							"id": "destroy",
 							"objectClass": "enemy_turret",
 							"sid": 176648839175248
+						},
+						{
+							"type": "comment",
+							"text": "тряска при взрыве"
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 906222220098084,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 440197653522849,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 404482586953190,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 223319797489145,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 654430110090913,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 546968336723327,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 691084343614338,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 386784622472622,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 118466760837101,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
 						}
 					],
 					"sid": 873001513311688,
