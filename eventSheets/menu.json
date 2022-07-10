@@ -31,17 +31,17 @@
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 116082162738061,
-					"parameters": {
-						"layout": "level1"
-					}
-				},
-				{
 					"id": "stop-all",
 					"objectClass": "Audio",
 					"sid": 323668003888167
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 567163636302671,
+					"parameters": {
+						"layout": "level1"
+					}
 				}
 			],
 			"sid": 244993752711198
