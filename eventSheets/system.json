@@ -477,6 +477,22 @@
 							"objectClass": "guiblack",
 							"sid": 930566254503593,
 							"behaviorType": "Fade"
+						},
+						{
+							"type": "comment",
+							"text": "запускаем музон на картах"
+						},
+						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 794094032987794,
+							"parameters": {
+								"folder": "music",
+								"audio-file-name": "LayoutName",
+								"loop": "looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 509598712672742
@@ -2030,6 +2046,11 @@
 							"behaviorType": "Fade2"
 						},
 						{
+							"id": "stop-all",
+							"objectClass": "Audio",
+							"sid": 303577050619017
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 157574620088066,
@@ -2065,6 +2086,11 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "stop-all",
+							"objectClass": "Audio",
+							"sid": 266757721331629
+						},
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
@@ -4385,9 +4411,14 @@
 							"behaviorType": "Fade2"
 						},
 						{
+							"id": "stop-all",
+							"objectClass": "Audio",
+							"sid": 259900578767116
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 310930747369399,
+							"sid": 608892948985960,
 							"parameters": {
 								"seconds": "1.0"
 							}

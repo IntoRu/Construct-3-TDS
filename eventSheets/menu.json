@@ -37,6 +37,11 @@
 					"parameters": {
 						"layout": "level1"
 					}
+				},
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 323668003888167
 				}
 			],
 			"sid": 244993752711198
@@ -77,6 +82,11 @@
 					"parameters": {
 						"slot": "\"mysave\""
 					}
+				},
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 101693034938285
 				}
 			],
 			"sid": 814217317850217
@@ -138,6 +148,17 @@
 					"sid": 639042965563769,
 					"parameters": {
 						"cursor-style": "hand"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 349046630020545,
+					"parameters": {
+						"audio-file": "menu",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],

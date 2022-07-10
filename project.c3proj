@@ -71,6 +71,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -209,7 +217,8 @@
 			"boss",
 			"boss_gun",
 			"boss_track",
-			"end_logo"
+			"end_logo",
+			"Audio"
 		],
 		"subfolders": []
 	},
@@ -281,7 +290,40 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "level1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 665787585184119,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "level2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 986363869599007,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "level3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 979472753821727,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "menu.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 113577456805206,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

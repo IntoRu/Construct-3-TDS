@@ -4178,8 +4178,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": -114.48764179190096,
-						"y": 1151.535945957522,
+						"x": -141,
+						"y": 1129,
 						"width": 48,
 						"height": 48,
 						"originX": 0.5,
@@ -4430,6 +4430,35 @@
 						"y": 331,
 						"width": 32,
 						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "checkpoint",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 218,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 379,
+						"y": 374,
+						"width": 48,
+						"height": 48,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
