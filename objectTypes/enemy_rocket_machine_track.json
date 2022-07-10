@@ -1,0 +1,59 @@
+{
+	"name": "enemy_rocket_machine_track",
+	"plugin-id": "Sprite",
+	"sid": 287778164128981,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 548359147140042
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 23,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4542149,
+						"collisionPoly": {
+							"points": [
+								0.03571428571428571,
+								0.029411764705882353,
+								0.5,
+								0.029411764705882353,
+								0.9285714285714286,
+								0.029411764705882353,
+								0.9285714285714286,
+								0.9411764705882353,
+								0.5,
+								0.9411764705882353,
+								0.03571428571428571,
+								0.9411764705882353
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 436947062005907,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

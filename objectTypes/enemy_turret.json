@@ -1,0 +1,208 @@
+{
+	"name": "enemy_turret",
+	"plugin-id": "Sprite",
+	"sid": 747586900342913,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "life",
+			"type": "number",
+			"desc": "",
+			"sid": 317501474597353
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Turret",
+			"name": "Turret",
+			"sid": 114882116572293
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 416319710618501
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 755419957977403
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 864589297565553
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 80,
+						"height": 80,
+						"originX": 0.4125,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6049520,
+						"collisionPoly": {
+							"points": [
+								0.20000000000000004,
+								0.2875000000000001,
+								0.8000000000000007,
+								0.2875000000000001,
+								0.8000000000000007,
+								0.7000000000000011,
+								0.20000000000000004,
+								0.7000000000000011
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "fire",
+								"x": 0.925,
+								"y": 0.45
+							},
+							{
+								"name": "fire2",
+								"x": 0.925,
+								"y": 0.55
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 80,
+						"height": 80,
+						"originX": 0.4125,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1078459,
+						"collisionPoly": {
+							"points": [
+								0.20000000000000004,
+								0.2875000000000001,
+								0.8000000000000007,
+								0.2875000000000001,
+								0.8000000000000007,
+								0.7000000000000011,
+								0.20000000000000004,
+								0.7000000000000011
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "fire",
+								"x": 0.925,
+								"y": 0.45
+							},
+							{
+								"name": "fire2",
+								"x": 0.925,
+								"y": 0.55
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 340671254149609,
+				"name": "shell",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 80,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9376508,
+						"collisionPoly": {
+							"points": [
+								0.2750000000000001,
+								0.2875000000000001,
+								0.712500000000001,
+								0.2875000000000001,
+								0.712500000000001,
+								0.7000000000000011,
+								0.2750000000000001,
+								0.7000000000000011
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "fire",
+								"x": 0.925,
+								"y": 0.45
+							},
+							{
+								"name": "fire2",
+								"x": 0.925,
+								"y": 0.55
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 80,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2970752,
+						"collisionPoly": {
+							"points": [
+								0.2750000000000001,
+								0.2875000000000001,
+								0.712500000000001,
+								0.2875000000000001,
+								0.712500000000001,
+								0.7000000000000011,
+								0.2750000000000001,
+								0.7000000000000011
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "fire",
+								"x": 0.925,
+								"y": 0.45
+							},
+							{
+								"name": "fire2",
+								"x": 0.925,
+								"y": 0.55
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 394923906767847,
+				"name": "rocket",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

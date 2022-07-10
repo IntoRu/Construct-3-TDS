@@ -1,0 +1,26 @@
+{
+	"name": "solid_tile",
+	"plugin-id": "TiledBg",
+	"sid": 547616555298969,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 535173483964106
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 16,
+		"height": 16,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 3418631,
+		"useCollisionPoly": true
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"name": "smoke_rocket",
+	"plugin-id": "Particles",
+	"sid": 493620355913864,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 260588934502316
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 421937364657572
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 64,
+		"height": 64,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 6066460,
+		"useCollisionPoly": true
+	}
+}

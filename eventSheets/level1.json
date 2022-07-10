@@ -12,6 +12,36 @@
 			"sid": 499720004238623
 		},
 		{
+			"eventType": "variable",
+			"name": "tank_gun",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 481944598709549
+		},
+		{
+			"eventType": "variable",
+			"name": "rotate_speed_gun",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 363612778681168
+		},
+		{
+			"eventType": "variable",
+			"name": "soldier_speed_shoot",
+			"type": "number",
+			"initialValue": "0.5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 457658254024718
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Game",
@@ -23,10 +53,6 @@
 					"text": "События которые всегда происходят"
 				},
 				{
-					"eventType": "comment",
-					"text": "Привязываем корпус танка к базе и поворачиваем с задержкой"
-				},
-				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -36,6 +62,10 @@
 						}
 					],
 					"actions": [
+						{
+							"type": "comment",
+							"text": "Привязываем корпус танка к базе и поворачиваем с задержкой"
+						},
 						{
 							"id": "set-position-to-another-object",
 							"objectClass": "plaer_tank_body",
@@ -93,9 +123,170 @@
 								"x": "lerp(scrollx, player_target.ImagePointX(\"camera\"),  1-0.3^dt)",
 								"y": "lerp(scrolly, player_target.ImagePointY(\"camera\"),  1-0.3^dt)"
 							}
+						},
+						{
+							"type": "comment",
+							"text": "стилизация курсора"
+						},
+						{
+							"id": "set-position",
+							"objectClass": "aim",
+							"sid": 990872371293055,
+							"parameters": {
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "aim",
+							"sid": 617437968742685
+						},
+						{
+							"type": "comment",
+							"text": "крепим башню к вражескому танку"
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "enemy_tank_gun",
+							"sid": 732281406084343,
+							"parameters": {
+								"object": "enemy_tank",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "меняем на лету апгрейд вражеского танка"
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "enemy_tank_gun",
+							"sid": 503617225723240,
+							"parameters": {
+								"animation": "enemy_tank.upgrade&enemy_tank.state",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "enemy_tank",
+							"sid": 660763412795854,
+							"parameters": {
+								"animation": "enemy_tank.state",
+								"from": "beginning"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "привязываем ракетницу"
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 633905412400311,
+							"parameters": {
+								"object": "enemy_rocket_machine",
+								"image-point-optional": "\"gun\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 944383150742285,
+							"parameters": {
+								"animation": "enemy_rocket_machine.state",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 498274858988777,
+							"parameters": {
+								"animation": "enemy_rocket_machine.state",
+								"from": "beginning"
+							}
 						}
 					],
 					"sid": 692327341258153
+				},
+				{
+					"eventType": "comment",
+					"text": "убираем стандартный курсор"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 401053053476973
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 554004701945546,
+							"parameters": {
+								"cursor-style": "none"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "вражеский солдат следит за нами"
+						},
+						{
+							"id": "add-object-to-target",
+							"objectClass": "enemi_soldier",
+							"sid": 343090957247520,
+							"behaviorType": "Turret",
+							"parameters": {
+								"target": "player_target"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "вражеский танк следит за нами"
+						},
+						{
+							"id": "add-object-to-target",
+							"objectClass": "enemy_tank_gun",
+							"sid": 723816133016509,
+							"behaviorType": "Turret",
+							"parameters": {
+								"target": "player_target"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "ракетница следит за нами"
+						},
+						{
+							"id": "add-object-to-target",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 571712574738966,
+							"behaviorType": "Turret",
+							"parameters": {
+								"target": "player_target"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "турель следит за нами"
+						},
+						{
+							"id": "add-object-to-target",
+							"objectClass": "enemy_turret",
+							"sid": 586603535417227,
+							"behaviorType": "Turret",
+							"parameters": {
+								"target": "player_target"
+							}
+						}
+					],
+					"sid": 509598712672742
 				}
 			],
 			"sid": 860028013614408
@@ -276,9 +467,9 @@
 						{
 							"id": "rotate-toward-position",
 							"objectClass": "player_tank_gun",
-							"sid": 635685050466467,
+							"sid": 918498086558685,
 							"parameters": {
-								"degrees": "1",
+								"degrees": "rotate_speed_gun",
 								"x": "Mouse.X",
 								"y": "Mouse.Y"
 							}
@@ -416,12 +607,11 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-click",
+							"id": "mouse-button-is-down",
 							"objectClass": "Mouse",
-							"sid": 901926042507748,
+							"sid": 129101079057237,
 							"parameters": {
-								"mouse-button": "left",
-								"click-type": "clicked"
+								"mouse-button": "left"
 							}
 						},
 						{
@@ -452,6 +642,14 @@
 								"instance-variable": "shells",
 								"comparison": 4,
 								"value": "0"
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 538871987078893,
+							"parameters": {
+								"interval-seconds": "tank_gun"
 							}
 						}
 					],
@@ -796,9 +994,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 584020429375758,
+							"sid": 596688008594614,
 							"parameters": {
-								"interval-seconds": "0.2"
+								"interval-seconds": "soldier_speed_shoot"
 							}
 						},
 						{
@@ -973,9 +1171,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 382573018333459,
+							"sid": 116183052388918,
 							"parameters": {
-								"interval-seconds": "0.2"
+								"interval-seconds": "soldier_speed_shoot"
 							}
 						},
 						{
@@ -1347,6 +1545,17 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "player_grenade",
+							"sid": 529989871971247,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_grenade",
 							"sid": 765163756156128,
 							"parameters": {
 								"object": "destroy",
@@ -1386,6 +1595,87 @@
 							"id": "destroy",
 							"objectClass": "player_grenade",
 							"sid": 540201500066211
+						},
+						{
+							"type": "comment",
+							"text": "тряска при взрыве"
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 533537723580888,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 733440371031694,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 871907888604759,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 311778759868255,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 756838690087025,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 983246116930884,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 977199466171290,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 224944579508083,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 408608476402534,
+							"parameters": {
+								"x": "scrollx-10+random(20)",
+								"y": "scrolly-10+random(20)"
+							}
 						}
 					],
 					"sid": 965060630811322
@@ -1399,8 +1689,2643 @@
 			"title": "Enemys",
 			"description": "События врагов",
 			"isActiveOnStart": true,
-			"children": [],
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "ВРАГ 1 - СОЛДАТ"
+				},
+				{
+					"eventType": "comment",
+					"text": "Если вражеский Солдат видит одного из персонажей Игрока"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "enemi_soldier",
+							"sid": 195809746937012,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "player_target",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "enemi_soldier",
+							"sid": 938555562241635
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "enemi_soldier",
+							"sid": 303405563880283,
+							"parameters": {
+								"animation": "\"fire-move\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "enemi_soldier",
+							"sid": 121063500460309,
+							"behaviorType": "Turret",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 972632896228470
+				},
+				{
+					"eventType": "comment",
+					"text": "если не видит"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "enemi_soldier",
+							"sid": 644348093958452,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "player_target",
+								"image-point": "0"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "enemi_soldier",
+							"sid": 616307441469160,
+							"parameters": {
+								"animation": "\"normal\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "enemi_soldier",
+							"sid": 458028890391195,
+							"behaviorType": "Turret",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "enemi_soldier",
+							"sid": 505636856665642,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"sid": 565917905273971
+				},
+				{
+					"eventType": "comment",
+					"text": "Стрельба и движение в сторону Игрока"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-shoot",
+							"objectClass": "enemi_soldier",
+							"sid": 170207443119307,
+							"behaviorType": "Turret"
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemi_soldier",
+							"sid": 797599322451817,
+							"parameters": {
+								"object": "enemy_bullet",
+								"layer": "\"character\"",
+								"image-point": "\"fire\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"type": "comment",
+							"text": "дульная вспышка"
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemi_soldier",
+							"sid": 935243102854179,
+							"parameters": {
+								"object": "plaer_bullet_explosion",
+								"layer": "\"character\"",
+								"image-point": "\"fire\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "plaer_bullet_explosion",
+							"sid": 475885186875895,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemi_soldier",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "find-path",
+							"objectClass": "enemi_soldier",
+							"sid": 727430350051187,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "player_target.x",
+								"y": "player_target.Y"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_bullet",
+							"sid": 818379039387603,
+							"parameters": {
+								"instance-variable": "coordinateX",
+								"value": "player_target.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_bullet",
+							"sid": 555740300545245,
+							"parameters": {
+								"instance-variable": "coordinateY",
+								"value": "player_target.Y"
+							}
+						}
+					],
+					"sid": 929944453018870
+				},
+				{
+					"eventType": "comment",
+					"text": "само движение врага когда он нас видит"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-path-found",
+							"objectClass": "enemi_soldier",
+							"sid": 611946262779587,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "move-along-path",
+							"objectClass": "enemi_soldier",
+							"sid": 457529872940618,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"sid": 786998470704745
+				},
+				{
+					"eventType": "comment",
+					"text": "ограничение дистанции пули"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 985662017914554,
+							"parameters": {
+								"object": "enemy_bullet"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 395852811225107,
+							"parameters": {
+								"first-value": "distance(enemy_bullet.x, enemy_bullet.Y, enemy_bullet.coordinateX, enemy_bullet.coordinateY)",
+								"comparison": 2,
+								"second-value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_bullet",
+							"sid": 369744559430898,
+							"parameters": {
+								"object": "bulet_trail",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_bullet",
+							"sid": 823320270934763
+						}
+					],
+					"sid": 650603640939716
+				},
+				{
+					"eventType": "comment",
+					"text": "Вражеский Солдат держит дистанцию до Игрока"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 910253290117786,
+							"parameters": {
+								"object": "enemi_soldier"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 471084630657866,
+							"parameters": {
+								"first-value": "distance(enemi_soldier.X, enemi_soldier.Y, player_target.X, player_target.Y)",
+								"comparison": 2,
+								"second-value": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "enemi_soldier",
+							"sid": 540967621208404,
+							"behaviorType": "Pathfinding"
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "enemi_soldier",
+							"sid": 650220974088291,
+							"parameters": {
+								"animation": "\"fire\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 603361022416549
+				},
+				{
+					"eventType": "comment",
+					"text": "давим солдатов"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "plaer_tank_body",
+							"sid": 752585861618796,
+							"parameters": {
+								"object": "enemi_soldier"
+							}
+						},
+						{
+							"id": "is-moving",
+							"objectClass": "tank_base",
+							"sid": 831023030204011,
+							"behaviorType": "8Direction"
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemi_soldier",
+							"sid": 864098006700636,
+							"parameters": {
+								"object": "enemy_solider_destroy",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemi_soldier",
+							"sid": 151254595465708
+						}
+					],
+					"sid": 520014159640977
+				},
+				{
+					"eventType": "comment",
+					"text": "убиваем солдатов пулями"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_bullet",
+							"sid": 763451939595608,
+							"parameters": {
+								"object": "enemi_soldier"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemi_soldier",
+							"sid": 645621972668613,
+							"parameters": {
+								"object": "enemy_solider_destroy",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemi_soldier",
+							"sid": 181706855353130
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_bullet",
+							"sid": 755642560048103
+						}
+					],
+					"sid": 886649707742490
+				},
+				{
+					"eventType": "comment",
+					"text": "убиваем солдатов снарядами"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_tank_shell",
+							"sid": 345234517672224,
+							"parameters": {
+								"object": "enemi_soldier"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_tank_shell",
+							"sid": 632206411345327,
+							"parameters": {
+								"object": "funnel",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_tank_shell",
+							"sid": 881934375162903,
+							"parameters": {
+								"object": "damage",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_tank_shell",
+							"sid": 495160288000716
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemi_soldier",
+							"sid": 177960942849874,
+							"parameters": {
+								"object": "enemy_solider_destroy",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_solider_destroy",
+							"sid": 687694766707336,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemi_soldier",
+							"sid": 128544384648886
+						}
+					],
+					"sid": 440073929909152
+				},
+				{
+					"eventType": "comment",
+					"text": "убиваем солдатов гранатами"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_grenade_radius",
+							"sid": 404686312408140,
+							"parameters": {
+								"object": "enemi_soldier"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemi_soldier",
+							"sid": 512039604594194,
+							"parameters": {
+								"object": "enemy_solider_destroy",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_solider_destroy",
+							"sid": 599327889641965,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemi_soldier",
+							"sid": 658101896389237
+						}
+					],
+					"sid": 717188094659627
+				},
+				{
+					"eventType": "comment",
+					"text": "ВРАГ 2 -  ТАНК"
+				},
+				{
+					"eventType": "comment",
+					"text": "Если вражеский Танк видит Игрока, то начинает стрельбу (без апгрейда)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-shoot",
+							"objectClass": "enemy_tank_gun",
+							"sid": 849374252116917,
+							"behaviorType": "Turret"
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "enemy_tank",
+							"sid": 425322709496514
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_tank",
+							"sid": 896801282670639,
+							"parameters": {
+								"instance-variable": "upgrade",
+								"comparison": 0,
+								"value": "\"one\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank_gun",
+							"sid": 405102650125523,
+							"parameters": {
+								"object": "enemy_tank_shell",
+								"layer": "\"character\"",
+								"image-point": "\"fire\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank_gun",
+							"sid": 527060368267915,
+							"parameters": {
+								"object": "player_tank_shell_explosion",
+								"layer": "\"character\"",
+								"image-point": "\"fire\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "player_tank_shell_explosion",
+							"sid": 937403890145602,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemy_tank_gun",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_tank_shell",
+							"sid": 115425615328106,
+							"parameters": {
+								"instance-variable": "coordinateX",
+								"value": "player_target.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_tank_shell",
+							"sid": 232866334326280,
+							"parameters": {
+								"instance-variable": "coordinateY",
+								"value": "player_target.Y"
+							}
+						},
+						{
+							"id": "find-path",
+							"objectClass": "enemy_tank",
+							"sid": 215230713213784,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "player_target.X",
+								"y": "player_target.Y"
+							}
+						}
+					],
+					"sid": 577118689889887
+				},
+				{
+					"eventType": "comment",
+					"text": "Если вражеский Танк видит Игрока, то начинает стрельбу (c апгрейдом)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-shoot",
+							"objectClass": "enemy_tank_gun",
+							"sid": 735706085843830,
+							"behaviorType": "Turret"
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "enemy_tank",
+							"sid": 202195026615084
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_tank",
+							"sid": 958865063078425,
+							"parameters": {
+								"instance-variable": "upgrade",
+								"comparison": 0,
+								"value": "\"two\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank_gun",
+							"sid": 423312901154868,
+							"parameters": {
+								"object": "enemy_tank_shell",
+								"layer": "\"character\"",
+								"image-point": "\"fire\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank_gun",
+							"sid": 804082808373037,
+							"parameters": {
+								"object": "player_tank_shell_explosion",
+								"layer": "\"character\"",
+								"image-point": "\"fire\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "player_tank_shell_explosion",
+							"sid": 930807133086546,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemy_tank_gun",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_tank_shell",
+							"sid": 703665692260077,
+							"parameters": {
+								"instance-variable": "coordinateX",
+								"value": "player_target.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_tank_shell",
+							"sid": 763480660606775,
+							"parameters": {
+								"instance-variable": "coordinateY",
+								"value": "player_target.Y"
+							}
+						},
+						{
+							"id": "find-path",
+							"objectClass": "enemy_tank",
+							"sid": 879827938276781,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "player_target.X",
+								"y": "player_target.Y"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 331357198990521,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank_gun",
+							"sid": 932638910677170,
+							"parameters": {
+								"object": "enemy_tank_shell",
+								"layer": "\"character\"",
+								"image-point": "\"fire2\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank_gun",
+							"sid": 275118464312997,
+							"parameters": {
+								"object": "player_tank_shell_explosion",
+								"layer": "\"character\"",
+								"image-point": "\"fire2\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "player_tank_shell_explosion",
+							"sid": 146413268610534,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemy_tank_gun",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_tank_shell",
+							"sid": 961524998589895,
+							"parameters": {
+								"instance-variable": "coordinateX",
+								"value": "player_target.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_tank_shell",
+							"sid": 839725045376126,
+							"parameters": {
+								"instance-variable": "coordinateY",
+								"value": "player_target.Y"
+							}
+						}
+					],
+					"sid": 598759605931335
+				},
+				{
+					"eventType": "comment",
+					"text": "Движение в сторону Игрока"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-path-found",
+							"objectClass": "enemy_tank",
+							"sid": 130871816075258,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "move-along-path",
+							"objectClass": "enemy_tank",
+							"sid": 765660222213571,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"sid": 127269639834105
+				},
+				{
+					"eventType": "comment",
+					"text": "ограничение дистанции выстрела вражеского танка"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 584954996663890,
+							"parameters": {
+								"object": "enemy_tank_shell"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 858965435154505,
+							"parameters": {
+								"first-value": "distance(enemy_tank_shell.X, enemy_tank_shell.Y,enemy_tank_shell.coordinateX,enemy_tank_shell.coordinateY)",
+								"comparison": 2,
+								"second-value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank_shell",
+							"sid": 918969785299017,
+							"parameters": {
+								"object": "funnel",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank_shell",
+							"sid": 666985043537977,
+							"parameters": {
+								"object": "smoke",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "funnel",
+							"sid": 477836421230386,
+							"parameters": {
+								"angle": "random(360)"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "funnel",
+							"sid": 176545724616754,
+							"parameters": {
+								"scale": "0.5+random(0.5)"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_tank_shell",
+							"sid": 794178093678980
+						}
+					],
+					"sid": 884846010562285
+				},
+				{
+					"eventType": "comment",
+					"text": "ограничение дистанции Движения вражекого танка"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 180176560262532,
+							"parameters": {
+								"object": "enemy_tank"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 780068830245560,
+							"parameters": {
+								"first-value": "distance(enemy_tank.X, enemy_tank.Y,player_target.X,player_target.Y)",
+								"comparison": 2,
+								"second-value": "200"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "enemy_tank",
+							"sid": 193461011746820,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"sid": 193149737320088
+				},
+				{
+					"eventType": "comment",
+					"text": "следы от вражеского танка"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving-along-path",
+							"objectClass": "enemy_tank",
+							"sid": 750864634022430,
+							"behaviorType": "Pathfinding"
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 757204571256965,
+							"parameters": {
+								"interval-seconds": "0.27"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank",
+							"sid": 903663304548041,
+							"parameters": {
+								"object": "enemy_tank_track",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "enemy_tank_track",
+							"sid": 907123186812748,
+							"parameters": {
+								"angle": "enemy_tank.Angle"
+							}
+						}
+					],
+					"sid": 772104899202986
+				},
+				{
+					"eventType": "comment",
+					"text": "повреждение вражеского танка пулями"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_bullet",
+							"sid": 556464899456185,
+							"parameters": {
+								"object": "enemy_tank"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "player_bullet",
+							"sid": 738110356313570
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "enemy_tank",
+							"sid": 399007161631702,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_tank",
+							"sid": 542860095523340,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_tank_gun",
+							"sid": 909739640564280,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "так понял откуда прилетело"
+						},
+						{
+							"id": "set-range",
+							"objectClass": "enemy_tank_gun",
+							"sid": 503962949041899,
+							"behaviorType": "Turret",
+							"parameters": {
+								"range": "1000"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 996284903576404,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_tank",
+							"sid": 548527304823819,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_tank_gun",
+							"sid": 493233540225345,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 804746353581033
+				},
+				{
+					"eventType": "comment",
+					"text": "повреждение вражеского танка снарядами"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_tank_shell",
+							"sid": 923779576162677,
+							"parameters": {
+								"object": "enemy_tank"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_tank_shell",
+							"sid": 298704458897379,
+							"parameters": {
+								"object": "damage",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_tank_shell",
+							"sid": 613846593485652
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "enemy_tank",
+							"sid": 249326476908987,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "10"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_tank",
+							"sid": 893284644260998,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_tank_gun",
+							"sid": 803374362469629,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "так понял откуда прилетело"
+						},
+						{
+							"id": "set-range",
+							"objectClass": "enemy_tank_gun",
+							"sid": 231728029969993,
+							"behaviorType": "Turret",
+							"parameters": {
+								"range": "1000"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 384790055198445,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_tank",
+							"sid": 765683284638621,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_tank_gun",
+							"sid": 154421203029190,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 726028332567904
+				},
+				{
+					"eventType": "comment",
+					"text": "переключаем сотояние при повреждении вражеского танка"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_tank",
+							"sid": 626786019694989,
+							"parameters": {
+								"instance-variable": "life",
+								"comparison": 3,
+								"value": "20"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 353985972594718
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_tank",
+							"sid": 667268238444565,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"damage\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank",
+							"sid": 393353696995219,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank",
+							"sid": 836305931103880,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 650211872196985
+				},
+				{
+					"eventType": "comment",
+					"text": "попала граната или нет жизней"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_grenade_radius",
+							"sid": 232296590707112,
+							"parameters": {
+								"object": "enemy_tank"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_tank",
+							"sid": 671972046378827,
+							"parameters": {
+								"instance-variable": "life",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank",
+							"sid": 155826504994606,
+							"parameters": {
+								"object": "funnel",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank",
+							"sid": 288314303965176,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_tank",
+							"sid": 974003682097805,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_tank",
+							"sid": 410182318045724
+						}
+					],
+					"sid": 542296729092647,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "comment",
+					"text": "ВРАГ 3 - РАКЕТНИЦА"
+				},
+				{
+					"eventType": "comment",
+					"text": "Если Ракетница видит Игрока, то начинает стрельбу"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-shoot",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 926507180377716,
+							"behaviorType": "Turret"
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 627281281851315
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 353097949306811,
+							"parameters": {
+								"object": "enemy_rocket",
+								"layer": "\"character\"",
+								"image-point": "\"fire\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "enemy_rocket",
+							"sid": 200001760556260,
+							"parameters": {
+								"angle": "enemy_rocket_machine_gun.Angle"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 866918930060139,
+							"parameters": {
+								"object": "smoke_rocket",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "smoke_rocket",
+							"sid": 873112444826172,
+							"parameters": {
+								"angle": "enemy_rocket.Angle+180"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "smoke_rocket",
+							"sid": 860727804853973,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemy_rocket",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 703079456757162,
+							"parameters": {
+								"object": "player_tank_shell_explosion",
+								"layer": "\"character\"",
+								"image-point": "\"fire\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "player_tank_shell_explosion",
+							"sid": 168433726350207,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemy_rocket_machine_gun",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "find-path",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 704859417332059,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "player_target.X",
+								"y": "player_target.Y"
+							}
+						},
+						{
+							"id": "find-path",
+							"objectClass": "enemy_rocket",
+							"sid": 756400802550196,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "player_target.X",
+								"y": "player_target.Y"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 554127961382058,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 382490520620134,
+							"parameters": {
+								"object": "enemy_rocket",
+								"layer": "\"character\"",
+								"image-point": "\"fire2\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "enemy_rocket",
+							"sid": 988145104495834,
+							"parameters": {
+								"angle": "enemy_rocket_machine_gun.Angle"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 875538200262352,
+							"parameters": {
+								"object": "smoke_rocket",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "smoke_rocket",
+							"sid": 261480854144155,
+							"parameters": {
+								"angle": "enemy_rocket.Angle+180"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "smoke_rocket",
+							"sid": 704546551258400,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemy_rocket",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 485839069102171,
+							"parameters": {
+								"object": "player_tank_shell_explosion",
+								"layer": "\"character\"",
+								"image-point": "\"fire2\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "player_tank_shell_explosion",
+							"sid": 471302929723027,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemy_rocket_machine_gun",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "find-path",
+							"objectClass": "enemy_rocket",
+							"sid": 690066288798326,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "player_target.X",
+								"y": "player_target.Y"
+							}
+						}
+					],
+					"sid": 517159638693466
+				},
+				{
+					"eventType": "comment",
+					"text": "движение ракетницы и ракеты к цели"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-path-found",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 333987185260303,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "move-along-path",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 241436554849995,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"sid": 882038055883283
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-path-found",
+							"objectClass": "enemy_rocket",
+							"sid": 810595445801731,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "move-along-path",
+							"objectClass": "enemy_rocket",
+							"sid": 333469240887842,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"sid": 846211196390617
+				},
+				{
+					"eventType": "comment",
+					"text": "Стрельба вражеской Ракетницы вхолостую"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-arrived",
+							"objectClass": "enemy_rocket",
+							"sid": 337363389462263,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 475365941536097,
+							"parameters": {
+								"object": "funnel",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 542019461953144,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 920541768635838,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "funnel",
+							"sid": 191869300444740,
+							"parameters": {
+								"angle": "random(360)"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "funnel",
+							"sid": 865782717817907,
+							"parameters": {
+								"scale": "0.5+random(0.5)"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_rocket",
+							"sid": 356104042161804
+						}
+					],
+					"sid": 913895544034201
+				},
+				{
+					"eventType": "comment",
+					"text": "Вражеская Ракетница держит дистанцию до Игрока"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 123921401225664,
+							"parameters": {
+								"object": "enemy_rocket_machine"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 997973261060077,
+							"parameters": {
+								"first-value": "distance(enemy_rocket_machine.X, enemy_rocket_machine.Y,player_target.X,player_target.Y)",
+								"comparison": 2,
+								"second-value": "300"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 266357889905623,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"sid": 910619317788756
+				},
+				{
+					"eventType": "comment",
+					"text": "следы от ракетницы"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving-along-path",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 141414657135744,
+							"behaviorType": "Pathfinding"
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 723264173459279,
+							"parameters": {
+								"interval-seconds": "0.14"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 498481641553501,
+							"parameters": {
+								"object": "enemy_rocket_machine_track",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "enemy_rocket_machine_track",
+							"sid": 921225779455500,
+							"parameters": {
+								"angle": "enemy_rocket_machine.Angle"
+							}
+						}
+					],
+					"sid": 771334085627922
+				},
+				{
+					"eventType": "comment",
+					"text": "повреждение ракетницы от пуль"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_bullet",
+							"sid": 874584171215398,
+							"parameters": {
+								"object": "enemy_rocket_machine"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "player_bullet",
+							"sid": 639432718744428
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 580137524690674,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 832625635305572,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 350624299168860,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "так понял откуда прилетело"
+						},
+						{
+							"id": "set-range",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 679098602832759,
+							"behaviorType": "Turret",
+							"parameters": {
+								"range": "1000"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 661846268379737,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 602029008928733,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 787611435099225,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 543989982074913
+				},
+				{
+					"eventType": "comment",
+					"text": "повреждение ракетницы от снарядов"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_tank_shell",
+							"sid": 114233031188578,
+							"parameters": {
+								"object": "enemy_rocket_machine"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_tank_shell",
+							"sid": 432136763165626,
+							"parameters": {
+								"object": "damage",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_tank_shell",
+							"sid": 845549638421817
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 613962680610819,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "10"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 936717636533698,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 444674212583839,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "так понял откуда прилетело"
+						},
+						{
+							"id": "set-range",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 408205689231981,
+							"behaviorType": "Turret",
+							"parameters": {
+								"range": "1000"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 432637214039029,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 397810994243611,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_rocket_machine_gun",
+							"sid": 847177532929608,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 165426788264120
+				},
+				{
+					"eventType": "comment",
+					"text": "переключаем сотояние при повреждении вражеской ракетницы"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 124502058424726,
+							"parameters": {
+								"instance-variable": "life",
+								"comparison": 3,
+								"value": "10"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 540384521642020
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 709447259612792,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"damage\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 677294126916566,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 253748896916615,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 782560562681124
+				},
+				{
+					"eventType": "comment",
+					"text": "попала граната или нет жизней"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_grenade_radius",
+							"sid": 985761573342674,
+							"parameters": {
+								"object": "enemy_rocket_machine"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 690068633395731,
+							"parameters": {
+								"instance-variable": "life",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 919675164924845,
+							"parameters": {
+								"object": "funnel",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 865850462368004,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 678567342781842,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_rocket_machine",
+							"sid": 497787817552703
+						}
+					],
+					"sid": 938960743519160,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "comment",
+					"text": "ВРАГ 4 - ТУРЕЛЬ"
+				},
+				{
+					"eventType": "comment",
+					"text": "Если Турель стреляет Снарядами"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-shoot",
+							"objectClass": "enemy_turret",
+							"sid": 405770611359406,
+							"behaviorType": "Turret"
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "enemy_turret",
+							"sid": 471613417906260
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "enemy_turret",
+							"sid": 363493542035762,
+							"parameters": {
+								"animation": "\"shell\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_turret",
+							"sid": 358142161493363,
+							"parameters": {
+								"object": "enemy_tank_shell",
+								"layer": "\"character\"",
+								"image-point": "\"fire\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_turret",
+							"sid": 270337679315420,
+							"parameters": {
+								"object": "player_tank_shell_explosion",
+								"layer": "\"character\"",
+								"image-point": "\"fire\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "player_tank_shell_explosion",
+							"sid": 122933566364448,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemy_turret",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_tank_shell",
+							"sid": 809435408291150,
+							"parameters": {
+								"instance-variable": "coordinateX",
+								"value": "player_target.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_tank_shell",
+							"sid": 497401074166750,
+							"parameters": {
+								"instance-variable": "coordinateY",
+								"value": "player_target.Y"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 684684275948248,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_turret",
+							"sid": 595880281923628,
+							"parameters": {
+								"object": "enemy_tank_shell",
+								"layer": "\"character\"",
+								"image-point": "\"fire2\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_turret",
+							"sid": 128466751457030,
+							"parameters": {
+								"object": "player_tank_shell_explosion",
+								"layer": "\"character\"",
+								"image-point": "\"fire2\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "player_tank_shell_explosion",
+							"sid": 939640942869310,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemy_turret",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_tank_shell",
+							"sid": 485720722677520,
+							"parameters": {
+								"instance-variable": "coordinateX",
+								"value": "player_target.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy_tank_shell",
+							"sid": 773694224673620,
+							"parameters": {
+								"instance-variable": "coordinateY",
+								"value": "player_target.Y"
+							}
+						}
+					],
+					"sid": 157865445890862
+				},
+				{
+					"eventType": "comment",
+					"text": "Если Турель стреляет ракетами"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-shoot",
+							"objectClass": "enemy_turret",
+							"sid": 443669630935783,
+							"behaviorType": "Turret"
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "enemy_turret",
+							"sid": 310098514015581
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "enemy_turret",
+							"sid": 181351376218939,
+							"parameters": {
+								"animation": "\"rocket\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_turret",
+							"sid": 909510350886829,
+							"parameters": {
+								"object": "enemy_rocket",
+								"layer": "\"character\"",
+								"image-point": "\"fire\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "enemy_rocket",
+							"sid": 662113776568827,
+							"parameters": {
+								"angle": "enemy_turret.Angle"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 136749667520855,
+							"parameters": {
+								"object": "smoke_rocket",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "smoke_rocket",
+							"sid": 796154408343212,
+							"parameters": {
+								"angle": "enemy_rocket.Angle+180"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "smoke_rocket",
+							"sid": 396949728151883,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemy_rocket",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_turret",
+							"sid": 541324063934501,
+							"parameters": {
+								"object": "player_tank_shell_explosion",
+								"layer": "\"character\"",
+								"image-point": "\"fire\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "player_tank_shell_explosion",
+							"sid": 710777149429674,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemy_turret",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "find-path",
+							"objectClass": "enemy_rocket",
+							"sid": 490483302138354,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "player_target.X",
+								"y": "player_target.Y"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 600014215704715,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_turret",
+							"sid": 944951274677284,
+							"parameters": {
+								"object": "enemy_rocket",
+								"layer": "\"character\"",
+								"image-point": "\"fire2\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "enemy_rocket",
+							"sid": 356916964948149,
+							"parameters": {
+								"angle": "enemy_turret.Angle"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_rocket",
+							"sid": 530991176882017,
+							"parameters": {
+								"object": "smoke_rocket",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "smoke_rocket",
+							"sid": 662149737533657,
+							"parameters": {
+								"angle": "enemy_rocket.Angle+180"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "smoke_rocket",
+							"sid": 335129739872796,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemy_rocket",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_turret",
+							"sid": 601804072215280,
+							"parameters": {
+								"object": "player_tank_shell_explosion",
+								"layer": "\"character\"",
+								"image-point": "\"fire2\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "player_tank_shell_explosion",
+							"sid": 261250506734061,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "enemy_turret",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "find-path",
+							"objectClass": "enemy_rocket",
+							"sid": 106257358046692,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "player_target.X",
+								"y": "player_target.Y"
+							}
+						}
+					],
+					"sid": 555818295028322
+				},
+				{
+					"eventType": "comment",
+					"text": "повреждение турели от пуль"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_bullet",
+							"sid": 723671533190161,
+							"parameters": {
+								"object": "enemy_turret"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "player_bullet",
+							"sid": 610278180655265
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "enemy_turret",
+							"sid": 420626041445042,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_turret",
+							"sid": 169545144373746,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "так понял откуда прилетело"
+						},
+						{
+							"id": "set-range",
+							"objectClass": "enemy_turret",
+							"sid": 802582614986755,
+							"behaviorType": "Turret",
+							"parameters": {
+								"range": "1000"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 381780973314849,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_turret",
+							"sid": 161578393024346,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 120654105929380
+				},
+				{
+					"eventType": "comment",
+					"text": "повреждение турели от снарядов"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_tank_shell",
+							"sid": 673188211631636,
+							"parameters": {
+								"object": "enemy_turret"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_tank_shell",
+							"sid": 498615738333155,
+							"parameters": {
+								"object": "damage",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_tank_shell",
+							"sid": 439251398560883
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "enemy_turret",
+							"sid": 938484176756287,
+							"parameters": {
+								"instance-variable": "life",
+								"value": "10"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_turret",
+							"sid": 234727759863380,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "так понял откуда прилетело"
+						},
+						{
+							"id": "set-range",
+							"objectClass": "enemy_turret",
+							"sid": 672538865681398,
+							"behaviorType": "Turret",
+							"parameters": {
+								"range": "1000"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 585510448936899,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "enemy_turret",
+							"sid": 369591319530183,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 327871783489857
+				},
+				{
+					"eventType": "comment",
+					"text": "попала граната или нет жизней"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_grenade_radius",
+							"sid": 820346858359873,
+							"parameters": {
+								"object": "enemy_turret"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy_turret",
+							"sid": 481088230652255,
+							"parameters": {
+								"instance-variable": "life",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_turret",
+							"sid": 394623161323823,
+							"parameters": {
+								"object": "funnel",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_turret",
+							"sid": 664791391195880,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "enemy_turret",
+							"sid": 744451074649055,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "enemy_turret",
+							"sid": 176648839175248
+						}
+					],
+					"sid": 873001513311688,
+					"isOrBlock": true
+				}
+			],
 			"sid": 981664390292295
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Бонусы",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "test получения бонусов"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "plaer_tank_body",
+							"sid": 391114654025052,
+							"parameters": {
+								"object": "bonus"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 196836125148124,
+							"parameters": {
+								"variable": "rotate_speed_gun",
+								"value": "5"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "bonus",
+							"sid": 727096809425661
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 799390932143146,
+							"parameters": {
+								"seconds": "10"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 891657751914027,
+							"parameters": {
+								"variable": "rotate_speed_gun",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 227271767262148
+				}
+			],
+			"sid": 105621891492882
 		}
 	],
 	"sid": 421239294399193

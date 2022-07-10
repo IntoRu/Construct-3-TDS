@@ -1,0 +1,124 @@
+{
+	"name": "enemy_tank",
+	"plugin-id": "Sprite",
+	"sid": 479964112808960,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "life",
+			"type": "number",
+			"desc": "",
+			"sid": 881772877249852
+		},
+		{
+			"name": "state",
+			"type": "string",
+			"desc": "",
+			"sid": 926661996814358
+		},
+		{
+			"name": "upgrade",
+			"type": "string",
+			"desc": "",
+			"sid": 213490214447780
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 108528272515591
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 357719706418209
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 372946521935222
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 896234356460690
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5980552,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 48,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6797057,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 922073169985709,
+				"name": "normal",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4121897,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 48,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 47595,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 168908761404627,
+				"name": "damage",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

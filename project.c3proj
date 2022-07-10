@@ -55,6 +55,22 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -101,6 +117,38 @@
 			"author": "Scirra",
 			"version": "r293.3",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pathfinding",
+			"name": "Pathfinding",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Turret",
+			"name": "Turret",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
 		}
 	],
 	"uniqueId": "enyedtgu2y1",
@@ -129,12 +177,45 @@
 			"smoke",
 			"destroy",
 			"player_tank_shell_explosion",
-			"plaer_bullet_explosion"
+			"plaer_bullet_explosion",
+			"aim",
+			"smoke2",
+			"solid_tile",
+			"enemi_soldier",
+			"enemy_bullet",
+			"enemy_solider_destroy",
+			"damage",
+			"enemy_tank",
+			"enemy_tank_gun",
+			"enemy_tank_shell",
+			"enemy_tank_track",
+			"bonus",
+			"enemy_rocket_machine",
+			"enemy_rocket_machine_gun",
+			"enemy_rocket",
+			"smoke_rocket",
+			"enemy_rocket_machine_track",
+			"enemy_turret"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
-	"containers": [],
+	"containers": [
+		{
+			"members": [
+				"enemy_tank",
+				"enemy_tank_gun"
+			],
+			"selectMode": "normal"
+		},
+		{
+			"members": [
+				"enemy_rocket_machine",
+				"enemy_rocket_machine_gun"
+			],
+			"selectMode": "normal"
+		}
+	],
 	"families": {
 		"items": [],
 		"subfolders": []

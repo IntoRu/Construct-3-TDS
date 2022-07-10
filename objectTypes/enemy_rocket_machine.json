@@ -1,0 +1,146 @@
+{
+	"name": "enemy_rocket_machine",
+	"plugin-id": "Sprite",
+	"sid": 141041711684046,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "life",
+			"type": "number",
+			"desc": "",
+			"sid": 426692948483294
+		},
+		{
+			"name": "state",
+			"type": "string",
+			"desc": "",
+			"sid": 673638358437733
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 242919874394357
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 258061184205237
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 143926946558578
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 384228611965964
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 62,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9316503,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "gun",
+								"x": 0.22580645161290322,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 62,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 692009,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "gun",
+								"x": 0.22580645161290322,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 719999195862774,
+				"name": "normal",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 62,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2367158,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "gun",
+								"x": 0.22580645161290322,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 62,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3641073,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "gun",
+								"x": 0.22580645161290322,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 498369645388606,
+				"name": "damage",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

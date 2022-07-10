@@ -1,0 +1,59 @@
+{
+	"name": "enemy_tank_track",
+	"plugin-id": "Sprite",
+	"sid": 283882656458205,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 847436923858735
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 28,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7717193,
+						"collisionPoly": {
+							"points": [
+								0.03571428571428571,
+								0.029411764705882353,
+								0.5,
+								0.029411764705882353,
+								0.9285714285714286,
+								0.029411764705882353,
+								0.9285714285714286,
+								0.9411764705882353,
+								0.5,
+								0.9411764705882353,
+								0.03571428571428571,
+								0.9411764705882353
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 768832255658377,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
