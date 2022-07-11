@@ -244,6 +244,15 @@
 					],
 					"actions": [
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 340722226411185,
+							"parameters": {
+								"variable": "upgrade",
+								"value": "\"one\""
+							}
+						},
+						{
 							"id": "set-cursor-style",
 							"objectClass": "Mouse",
 							"sid": 554004701945546,
@@ -4759,17 +4768,26 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 608892948985960,
+							"sid": 145694488182483,
 							"parameters": {
-								"seconds": "1.0"
+								"seconds": "1"
 							}
 						},
 						{
 							"id": "load",
 							"objectClass": "System",
 							"sid": 542314661305818,
+							"disabled": true,
 							"parameters": {
 								"slot": "\"mysave\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 908494078047635,
+							"parameters": {
+								"layout": "dead"
 							}
 						}
 					],

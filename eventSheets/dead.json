@@ -1,0 +1,169 @@
+{
+	"name": "dead",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Старт новой игры"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 735653314860778,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Text"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Text",
+					"sid": 239215350310794,
+					"parameters": {
+						"instance-variable": "class",
+						"comparison": 0,
+						"value": "\"start\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 760924548302718
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 487630592570152,
+					"parameters": {
+						"layout": "level1"
+					}
+				}
+			],
+			"sid": 360702420324881
+		},
+		{
+			"eventType": "comment",
+			"text": "Продолжить игру"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 488079341019820,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Text"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Text",
+					"sid": 296615979011554,
+					"parameters": {
+						"instance-variable": "class",
+						"comparison": 0,
+						"value": "\"continue\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "System",
+					"sid": 936022799233634,
+					"parameters": {
+						"slot": "\"mysave\""
+					}
+				},
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 282151774267473
+				}
+			],
+			"sid": 611751633996518
+		},
+		{
+			"eventType": "comment",
+			"text": "Выход"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 222840306597810,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Text"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Text",
+					"sid": 632984224991461,
+					"parameters": {
+						"instance-variable": "class",
+						"comparison": 0,
+						"value": "\"exit\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "close",
+					"objectClass": "Browser",
+					"sid": 143553893680860
+				}
+			],
+			"sid": 271489750210960
+		},
+		{
+			"eventType": "comment",
+			"text": "возвращаем курсор и врубаем музон"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 312982997194904
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 384534180562303,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 892597041383166,
+					"parameters": {
+						"audio-file": "dead",
+						"loop": "not-looping",
+						"volume": "5",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 376400722895665
+		}
+	],
+	"sid": 843374856850720
+}

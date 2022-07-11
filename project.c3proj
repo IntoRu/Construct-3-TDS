@@ -269,14 +269,16 @@
 			"menu",
 			"level1",
 			"level2",
-			"end"
+			"end",
+			"dead"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"menu",
-			"system"
+			"system",
+			"dead"
 		],
 		"subfolders": []
 	},
@@ -456,6 +458,14 @@
 					"name": "menu.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 113577456805206,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "dead.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 840539098248579,
 					"file-info": {
 						"purpose": "none"
 					}
