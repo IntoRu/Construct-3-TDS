@@ -464,14 +464,6 @@
 					}
 				},
 				{
-					"name": "level3.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 979472753821727,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
 					"name": "menu.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 113577456805206,
@@ -483,6 +475,14 @@
 					"name": "dead.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 840539098248579,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "level3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 370471356310697,
 					"file-info": {
 						"purpose": "none"
 					}
