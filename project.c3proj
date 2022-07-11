@@ -8,6 +8,14 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
@@ -209,7 +217,16 @@
 			"end_logo",
 			"Audio"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"ground1",
+					"roads1"
+				],
+				"subfolders": [],
+				"name": "tiles"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [
