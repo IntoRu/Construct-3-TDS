@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "background",
+					"type": "tank_logo",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -19,41 +19,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": -1,
-						"y": -1,
-						"width": 855,
+						"x": -0.7507685595979865,
+						"y": 0,
+						"width": 855.750768559598,
 						"height": 482,
 						"originX": 0,
 						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "tank_menu",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 447,
-						"y": 148,
-						"width": 546,
-						"height": 292,
-						"originX": 0.5,
-						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -106,12 +77,12 @@
 						"font": "Arial",
 						"size": 16,
 						"line-height": 0,
-						"bold": false,
+						"bold": true,
 						"italic": false,
 						"color": [
-							0.9803921568627451,
-							0.9803921568627451,
-							0.9803921568627451,
+							1,
+							1,
+							1,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -150,7 +121,7 @@
 						"font": "Arial",
 						"size": 16,
 						"line-height": 0,
-						"bold": false,
+						"bold": true,
 						"italic": false,
 						"color": [
 							0.9803921568627451,
@@ -194,7 +165,7 @@
 						"font": "Arial",
 						"size": 16,
 						"line-height": 0,
-						"bold": false,
+						"bold": true,
 						"italic": false,
 						"color": [
 							0.9803921568627451,

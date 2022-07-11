@@ -165,8 +165,6 @@
 			"Text",
 			"Mouse",
 			"Browser",
-			"background",
-			"tank_menu",
 			"plaer_tank_body",
 			"tank_base",
 			"Keyboard",
@@ -215,7 +213,8 @@
 			"boss_gun",
 			"boss_track",
 			"end_logo",
-			"Audio"
+			"Audio",
+			"tank_logo"
 		],
 		"subfolders": [
 			{
