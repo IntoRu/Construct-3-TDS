@@ -3156,6 +3156,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 319827367252469,
+							"parameters": {
+								"audio-file": "shoot",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"type": "comment",
 							"text": "дульная вспышка"
 						},
