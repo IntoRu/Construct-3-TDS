@@ -221,7 +221,9 @@
 			{
 				"items": [
 					"ground1",
-					"roads1"
+					"roads1",
+					"ground2",
+					"roads2"
 				],
 				"subfolders": [],
 				"name": "tiles"
