@@ -2170,7 +2170,7 @@
 							"height": 48,
 							"max-width": 96,
 							"max-height": 96,
-							"data": "393x0,30x248,64x0,211,95x0,211,95x0,212,95x0,213,4x0,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,4x0,211,58x0,213,4x0,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,4x0,211,54x0,5x177,209,35x0,212,56x0,211,2x0,211,35x0,213,56x0,212,2x0,212,7x0,193,145,161,177,145,161,177,209,6x0,193,145,161,177,145,161,177,145,161,177,145,161,145,161,212,56x0,213,2x0,213,7x0,211,6x0,211,6x0,211,4x0,211,8x0,213,56x0,211,2x0,194,3x177,209,3x0,211,6x0,212,6x0,212,4x0,212,8x0,211,56x0,212,6x0,211,3x0,212,6x0,213,6x0,213,4x0,213,8x0,211,56x0,213,6x0,212,145,161,177,210,6x0,194,145,161,177,145,161,177,210,4x0,213,64x0,72,88,104,5x0,213,21x0,72,88,104,63x0,73,89,105,5x0,211,21x0,73,89,105,63x0,74,90,106,5x0,212,21x0,74,90,106,63x0,73,89,105,5x0,213,21x0,73,89,105,63x0,73,89,105,27x0,74,90,106,63x0,74,90,106,27x0,73,89,105,63x0,73,89,105,27x0,74,90,106,63x0,74,90,106,27x0,75,91,107,63x0,75,91,107,28x0,211,95x0,194,177,145,161,177,209,60x0,180,196,33x0,211,60x0,181,197,33x0,212,60x0,181,197,33x0,213,60x0,180,196,33x0,194,145,209,58x0,181,197,35x0,211,58x0,180,196,35x0,212,58x0,181,197,35x0,213,58x0,181,197,14x0,7,23,39,23,39,23,39,23,39,55,11x0,211,59x0,162,178,162,178,162,178,162,178,162,178,162,178,162,178,0,8,24,40,24,40,24,40,24,40,56,177,209,9x0,212,59x0,163,179,163,179,163,179,163,179,163,179,163,179,163,179,0,9,25,41,25,41,25,41,25,41,57,0,211,9x0,211,85x0,212,9x0,212,85x0,194,177,209,7x0,213,87x0,211,4x0,193,161,177,210,87x0,211,4x0,211,90x0,211,4x0,212,62x0,13x248,15x0,194,177,145,161,177,210,5144x0"
+							"data": "393x0,30x248,64x0,211,95x0,211,95x0,212,95x0,213,4x0,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,178,162,4x0,211,58x0,213,4x0,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,179,163,4x0,211,54x0,5x177,209,35x0,212,56x0,211,2x0,211,35x0,213,56x0,212,2x0,212,7x0,193,145,161,177,145,161,177,209,6x0,193,145,161,177,145,161,177,145,161,177,145,161,145,161,212,56x0,213,2x0,213,7x0,211,6x0,211,6x0,211,4x0,211,8x0,213,56x0,211,2x0,194,3x177,209,3x0,211,6x0,212,6x0,212,4x0,212,8x0,211,56x0,212,6x0,211,3x0,212,6x0,213,6x0,213,4x0,213,8x0,211,56x0,213,6x0,212,145,161,177,210,6x0,194,145,161,177,145,161,177,210,4x0,213,64x0,72,88,104,5x0,213,21x0,72,88,104,63x0,73,89,105,5x0,211,21x0,73,89,105,63x0,74,90,106,5x0,212,21x0,74,90,106,63x0,73,89,105,5x0,213,21x0,73,89,105,63x0,73,89,105,27x0,74,90,106,63x0,74,90,106,27x0,73,89,105,63x0,73,89,105,27x0,74,90,106,63x0,74,90,106,27x0,75,91,107,63x0,75,91,107,28x0,211,95x0,194,177,145,161,177,209,60x0,180,196,33x0,211,58x0,211,0,181,197,33x0,212,58x0,212,0,181,197,13x0,164,19x0,213,58x0,212,0,180,196,13x0,164,19x0,194,145,209,56x0,211,0,181,197,13x0,164,21x0,211,56x0,212,2x0,162,178,162,178,162,178,162,178,162,178,162,178,2x0,164,21x0,212,56x0,211,2x0,163,179,163,179,163,179,163,179,163,179,163,179,24x0,213,56x0,212,7x0,193,161,177,161,177,209,4x0,7,23,39,23,39,23,39,23,39,55,11x0,211,56x0,194,2x145,161,209,3x0,211,2x0,164,0,211,2x0,193,177,8,24,40,24,40,24,40,24,40,56,177,209,9x0,212,60x0,211,3x0,212,2x0,164,0,212,2x0,211,0,9,25,41,25,41,25,41,25,41,57,0,211,9x0,211,60x0,212,3x0,212,4x0,194,161,177,210,12x0,212,9x0,212,60x0,211,0,164,0,211,20x0,194,177,209,7x0,213,60x0,212,0,164,0,212,22x0,211,4x0,193,161,177,210,60x0,194,2x145,161,210,22x0,211,4x0,211,90x0,211,4x0,212,62x0,13x248,15x0,194,177,145,161,177,210,5144x0"
 						},
 						"tile-width": 64,
 						"tile-height": 64,
@@ -9010,74 +9010,6 @@
 						"y": 186,
 						"width": 126,
 						"height": 130,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "enemy_tank",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "normal",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 529,
-					"instanceVariables": {
-						"life": 40,
-						"state": "normal",
-						"upgrade": "one"
-					},
-					"behaviors": {
-						"Pathfinding": {
-							"properties": {
-								"cell-size": 30,
-								"cell-border": -1,
-								"obstacles": "solids",
-								"max-speed": 100,
-								"acceleration": 1000,
-								"deceleration": 1000,
-								"rotate-speed": 150,
-								"rotate-object": true,
-								"diagonals": true,
-								"enabled": true
-							}
-						},
-						"8Direction": {
-							"properties": {
-								"max-speed": 150,
-								"acceleration": 600,
-								"deceleration": 500,
-								"directions": "dir-8",
-								"set-angle": "smooth",
-								"default-controls": false,
-								"enabled": true
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 2560,
-						"y": 256,
-						"width": 48,
-						"height": 34,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -34599,6 +34531,258 @@
 							1
 						],
 						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "buildings",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "house3",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 419,
+					"instanceVariables": {
+						"state": "normal",
+						"life": 30
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 2710,
+						"y": 1300,
+						"width": 126,
+						"height": 130,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 3.117153637001169,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "buildings",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "house3",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 420,
+					"instanceVariables": {
+						"state": "normal",
+						"life": 30
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 2723,
+						"y": 313,
+						"width": 126,
+						"height": 130,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.014003573432564309,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "buildings",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "house1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 421,
+					"instanceVariables": {
+						"state": "normal",
+						"life": 30
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 1754,
+						"y": 225,
+						"width": 120,
+						"height": 114,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.701293002499432,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "buildings",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "house3",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 422,
+					"instanceVariables": {
+						"state": "normal",
+						"life": 30
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 1820,
+						"y": 1298,
+						"width": 126,
+						"height": 130,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.744571159482941,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "buildings",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "house1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 424,
+					"instanceVariables": {
+						"state": "normal",
+						"life": 30
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 2408,
+						"y": 923,
+						"width": 120,
+						"height": 114,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5532689427498445,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "buildings",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "house1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 425,
+					"instanceVariables": {
+						"state": "normal",
+						"life": 30
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 2404,
+						"y": 614,
+						"width": 120,
+						"height": 114,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.701293002499432,
 						"zElevation": 0
 					}
 				}

@@ -5161,6 +5161,17 @@
 							"id": "destroy",
 							"objectClass": "enemi_soldier",
 							"sid": 151254595465708
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 885580503742061,
+							"parameters": {
+								"audio-file": "naezd",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 520014159640977
