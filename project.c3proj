@@ -40,14 +40,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Tilemap",
-			"name": "Tilemap",
-			"author": "Scirra",
-			"version": "r293.3",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -167,8 +159,6 @@
 			"Browser",
 			"background",
 			"tank_menu",
-			"tilemap_ground",
-			"tilemap_background",
 			"plaer_tank_body",
 			"tank_base",
 			"Keyboard",
@@ -213,7 +203,6 @@
 			"bonus",
 			"checkpoint",
 			"guiblack",
-			"Tilemap_ground2",
 			"boss",
 			"boss_gun",
 			"boss_track",
@@ -269,6 +258,7 @@
 			"menu",
 			"level1",
 			"level2",
+			"level3",
 			"end",
 			"dead"
 		],
