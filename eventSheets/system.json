@@ -2059,13 +2059,9 @@
 							}
 						},
 						{
-							"id": "set-visible",
+							"id": "destroy",
 							"objectClass": "checkpoint",
-							"sid": 921968991670556,
-							"disabled": true,
-							"parameters": {
-								"visibility": "invisible"
-							}
+							"sid": 976999570995100
 						}
 					],
 					"sid": 735112135748018
