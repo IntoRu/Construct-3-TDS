@@ -222,7 +222,8 @@
 					"ground1",
 					"roads1",
 					"ground2",
-					"roads2"
+					"roads2",
+					"ground3"
 				],
 				"subfolders": [],
 				"name": "tiles"
