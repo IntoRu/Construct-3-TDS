@@ -75,14 +75,14 @@
 						"text": "Новая игра",
 						"enable-bbcode": true,
 						"font": "Arial",
-						"size": 16,
+						"size": 14,
 						"line-height": 0,
 						"bold": true,
 						"italic": false,
 						"color": [
-							1,
-							1,
-							1,
+							0.027450980392156862,
+							0.09019607843137255,
+							0.9294117647058824,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -97,8 +97,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 337,
-						"y": 308,
+						"x": 3,
+						"y": 15,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
@@ -119,14 +119,14 @@
 						"text": "Продолжить",
 						"enable-bbcode": true,
 						"font": "Arial",
-						"size": 16,
+						"size": 14,
 						"line-height": 0,
 						"bold": true,
 						"italic": false,
 						"color": [
-							0.9803921568627451,
-							0.9803921568627451,
-							0.9803921568627451,
+							0.027450980392156862,
+							0.09019607843137255,
+							0.9294117647058824,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -141,8 +141,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 338,
-						"y": 352,
+						"x": 8,
+						"y": 46,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
@@ -163,14 +163,14 @@
 						"text": "Выход",
 						"enable-bbcode": true,
 						"font": "Arial",
-						"size": 16,
+						"size": 14,
 						"line-height": 0,
 						"bold": true,
 						"italic": false,
 						"color": [
-							0.9803921568627451,
-							0.9803921568627451,
-							0.9803921568627451,
+							0.027450980392156862,
+							0.09019607843137255,
+							0.9294117647058824,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -185,9 +185,219 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 338,
-						"y": 400,
+						"x": 2,
+						"y": 78,
 						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "guide",
+					"properties": {
+						"text": "Движение - стандартные кнопки",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 10,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 1723,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 621,
+						"y": 395,
+						"width": 231,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "guide",
+					"properties": {
+						"text": "Выйти из танка - CTRL",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 10,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 1724,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 622,
+						"y": 417,
+						"width": 331,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "guide",
+					"properties": {
+						"text": "Стандартный огонь - LKM",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 10,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 1725,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 622,
+						"y": 438,
+						"width": 331,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "guide",
+					"properties": {
+						"text": "Альтернативный огонь - RKM",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 10,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 1726,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 622,
+						"y": 460,
+						"width": 331,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "guide",
+					"properties": {
+						"text": "Управление:",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 10,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 1727,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 683,
+						"y": 373,
+						"width": 91,
 						"height": 30,
 						"originX": 0,
 						"originY": 0,

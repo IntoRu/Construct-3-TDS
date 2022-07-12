@@ -214,7 +214,8 @@
 			"boss_track",
 			"end_logo",
 			"Audio",
-			"tank_logo"
+			"tank_logo",
+			"guide"
 		],
 		"subfolders": [
 			{

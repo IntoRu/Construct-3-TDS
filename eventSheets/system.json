@@ -2057,6 +2057,15 @@
 							"parameters": {
 								"frame-number": "0"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "checkpoint",
+							"sid": 921968991670556,
+							"disabled": true,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						}
 					],
 					"sid": 735112135748018
@@ -2263,9 +2272,28 @@
 				},
 				{
 					"eventType": "block",
-					"conditions": [],
-					"actions": [],
-					"sid": 798621582213592
+					"conditions": [
+						{
+							"id": "on-load-complete",
+							"objectClass": "System",
+							"sid": 894057641573620
+						}
+					],
+					"actions": [
+						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 452857348835132,
+							"parameters": {
+								"folder": "music",
+								"audio-file-name": "LayoutName",
+								"loop": "looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 766097745828031
 				}
 			],
 			"sid": 860028013614408
