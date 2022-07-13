@@ -2603,6 +2603,205 @@
 						}
 					],
 					"sid": 174067726143732
+				},
+				{
+					"eventType": "comment",
+					"text": "БРЫЗГИ",
+					"background-color": [
+						0.8862745098039215,
+						0.03137254901960784,
+						0.03137254901960784,
+						1
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "брызги от пуль",
+					"background-color": [
+						0.03137254901960784,
+						0.8862745098039215,
+						0.20392156862745098,
+						1
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "aim",
+							"sid": 219774908110577,
+							"parameters": {
+								"object": "whater_background"
+							}
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 378428782687249,
+							"parameters": {
+								"object": "player_bullet"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 166889214234717,
+							"parameters": {
+								"first-value": "distance(player_bullet.x, player_bullet.Y, player_bullet.coordinateX, player_bullet.coordinateY)",
+								"comparison": 2,
+								"second-value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_bullet",
+							"sid": 893638159298019,
+							"parameters": {
+								"object": "whater",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_bullet",
+							"sid": 675763310962065
+						}
+					],
+					"sid": 400055130728468
+				},
+				{
+					"eventType": "comment",
+					"text": "брызги от снарядов",
+					"background-color": [
+						0.03137254901960784,
+						0.8862745098039215,
+						0.20392156862745098,
+						1
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "aim",
+							"sid": 187494873849752,
+							"parameters": {
+								"object": "whater_background"
+							}
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 116031276510552,
+							"parameters": {
+								"object": "player_tank_shell"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 205303008437806,
+							"parameters": {
+								"first-value": "distance(player_tank_shell.X, player_tank_shell.Y, player_tank_shell.coordinateX, player_tank_shell.coordinateY)",
+								"comparison": 2,
+								"second-value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_tank_shell",
+							"sid": 878592196210105,
+							"parameters": {
+								"object": "whater",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_tank_shell",
+							"sid": 577871789758490
+						}
+					],
+					"sid": 915292494891031
+				},
+				{
+					"eventType": "comment",
+					"text": "брызги от гранат",
+					"background-color": [
+						0.03137254901960784,
+						0.8862745098039215,
+						0.20392156862745098,
+						1
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_grenade_radius",
+							"sid": 234393289647999,
+							"parameters": {
+								"object": "whater_background"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_grenade_radius",
+							"sid": 405882017797303,
+							"parameters": {
+								"object": "whater",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "smoke2",
+							"sid": 868625843491243,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "destroy",
+							"sid": 818819129488541,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "funnel",
+							"sid": 995727985906563,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 515725649693997,
+							"parameters": {
+								"tag": "\"destroy\""
+							}
+						}
+					],
+					"sid": 895873056757223
 				}
 			],
 			"sid": 860028013614408
@@ -3909,7 +4108,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "player_bullet",
-							"sid": 290601100470188,
+							"sid": 322133334608449,
 							"parameters": {
 								"object": "bulet_trail",
 								"layer": "\"tilemap_roads\"",
@@ -4025,7 +4224,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "player_grenade",
-							"sid": 529989871971247,
+							"sid": 564882051483865,
 							"parameters": {
 								"object": "smoke2",
 								"layer": "\"character\"",
@@ -4079,12 +4278,12 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 429986687345755,
+							"sid": 384467559980765,
 							"parameters": {
 								"audio-file": "destroy",
 								"loop": "not-looping",
 								"volume": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"destroy\""
 							}
 						},
 						{

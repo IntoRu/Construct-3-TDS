@@ -1,0 +1,20 @@
+{
+	"name": "whater",
+	"plugin-id": "Particles",
+	"sid": 526279139788560,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 64,
+		"height": 64,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 9733736,
+		"useCollisionPoly": true
+	}
+}

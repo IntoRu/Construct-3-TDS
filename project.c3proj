@@ -224,7 +224,9 @@
 			"Audio",
 			"tank_logo",
 			"guide",
-			"player_plane"
+			"player_plane",
+			"whater",
+			"whater_background"
 		],
 		"subfolders": [
 			{
