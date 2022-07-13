@@ -32,6 +32,11 @@
 								"name": "camera",
 								"x": 9.375,
 								"y": 0.5
+							},
+							{
+								"name": "airstrike",
+								"x": -4.8125,
+								"y": 2.125
 							}
 						],
 						"duration": 1

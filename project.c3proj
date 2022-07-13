@@ -223,7 +223,8 @@
 			"end_logo",
 			"Audio",
 			"tank_logo",
-			"guide"
+			"guide",
+			"player_plane"
 		],
 		"subfolders": [
 			{
@@ -449,6 +450,14 @@
 					"name": "naezd.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 580946682246206,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "airstrike.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 973604864616676,
 					"file-info": {
 						"purpose": "none"
 					}

@@ -1616,6 +1616,242 @@
 				},
 				{
 					"eventType": "comment",
+					"text": "АВИОУДАР",
+					"background-color": [
+						0.9294117647058824,
+						0.027450980392156862,
+						0.027450980392156862,
+						1
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_target",
+							"sid": 859028251104038,
+							"parameters": {
+								"object": "bonus"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "bonus",
+							"sid": 203607222352745,
+							"parameters": {
+								"instance-variable": "class",
+								"comparison": 0,
+								"value": "\"airstrike\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "bonus",
+							"sid": 889090844317562
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 822390024762172,
+							"parameters": {
+								"audio-file": "bonusupgrade",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 476911806305357,
+							"parameters": {
+								"audio-file": "airstrike",
+								"loop": "looping",
+								"volume": "0",
+								"tag-optional": "\"airstrike\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 317569694599810,
+							"parameters": {
+								"audio-file": "airstrike",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"airstrike\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 735511095448342,
+							"parameters": {
+								"seconds": "3"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_target",
+							"sid": 593158157462216,
+							"parameters": {
+								"object": "player_plane",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "player_plane",
+							"sid": 204786781361405,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 850140677341439,
+							"parameters": {
+								"seconds": "30"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player_plane",
+							"sid": 540604003061737
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 643715370799863,
+							"parameters": {
+								"tag": "\"airstrike\""
+							}
+						}
+					],
+					"sid": 116788622956685
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-layer",
+							"objectClass": "player_plane",
+							"sid": 905875264527963,
+							"parameters": {
+								"layer": "\"character\""
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 364918014805687,
+							"parameters": {
+								"interval-seconds": "0.1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_plane",
+							"sid": 592349646201298,
+							"parameters": {
+								"object": "player_grenade_radius",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_plane",
+							"sid": 105980005274966,
+							"parameters": {
+								"object": "destroy",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_plane",
+							"sid": 262025013763617,
+							"parameters": {
+								"object": "smoke2",
+								"layer": "\"character\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player_plane",
+							"sid": 958199512842740,
+							"parameters": {
+								"object": "funnel",
+								"layer": "\"tilemap_roads\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"type": "comment",
+							"text": "разброс авиоснарядов",
+							"background-color": [
+								0.1843137254901961,
+								0.8196078431372549,
+								0.13725490196078433,
+								1
+							]
+						},
+						{
+							"id": "set-position",
+							"objectClass": "player_grenade_radius",
+							"sid": 344116361618012,
+							"parameters": {
+								"x": "random((player_plane.X-200),(player_plane.X))",
+								"y": "random((player_plane.Y),(player_plane.Y+300))"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "destroy",
+							"sid": 241875319681334,
+							"parameters": {
+								"object": "player_grenade_radius",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "smoke2",
+							"sid": 236644006400674,
+							"parameters": {
+								"object": "player_grenade_radius",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "funnel",
+							"sid": 385894855385280,
+							"parameters": {
+								"object": "player_grenade_radius",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 851894951494400
+				},
+				{
+					"eventType": "comment",
 					"text": "Бонус, прибавляющий Патроны"
 				},
 				{
@@ -2293,7 +2529,13 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "НАВЕДЕНИЕ ПРИЦЕЛА НА ВРАГА"
+					"text": "НАВЕДЕНИЕ ПРИЦЕЛА НА ВРАГА",
+					"background-color": [
+						0.9294117647058824,
+						0.027450980392156862,
+						0.027450980392156862,
+						1
+					]
 				},
 				{
 					"eventType": "block",

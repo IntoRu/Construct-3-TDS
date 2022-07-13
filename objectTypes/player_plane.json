@@ -1,0 +1,48 @@
+{
+	"name": "player_plane",
+	"plugin-id": "Sprite",
+	"sid": 883702162991450,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 823874663395003
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 633789975888272
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 132,
+						"height": 174,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9768980,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 368918097986240,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -92,6 +92,18 @@
 						"imageSpriteId": 5932112,
 						"useCollisionPoly": true,
 						"duration": 1
+					},
+					{
+						"width": 56,
+						"height": 53,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8342617,
+						"useCollisionPoly": true,
+						"duration": 1
 					}
 				],
 				"sid": 895635972355238,
