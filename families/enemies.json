@@ -1,0 +1,15 @@
+{
+	"name": "enemies",
+	"plugin-id": "Sprite",
+	"sid": 210991535112843,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"boss",
+		"enemi_soldier",
+		"enemy_rocket_machine",
+		"enemy_tank",
+		"enemy_turret"
+	]
+}

@@ -788,6 +788,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -1489,6 +1490,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -1574,6 +1576,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -1659,6 +1662,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -1744,6 +1748,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -1829,6 +1834,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -1914,6 +1920,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -1999,6 +2006,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -2084,6 +2092,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -2169,6 +2178,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -2254,6 +2264,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -2339,6 +2350,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -2424,6 +2436,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -2509,6 +2522,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -2594,6 +2608,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -2679,6 +2694,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -2764,6 +2780,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -2849,6 +2866,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -2934,6 +2952,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -3019,6 +3038,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -3104,6 +3124,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -3189,6 +3210,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -3274,6 +3296,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -3359,6 +3382,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -3444,6 +3468,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -3529,6 +3554,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -3614,6 +3640,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -3699,6 +3726,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -3784,6 +3812,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -3869,6 +3898,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -3954,6 +3984,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -4039,6 +4070,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -4124,6 +4156,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -4209,6 +4242,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -4294,6 +4328,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -4379,6 +4414,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -4464,6 +4500,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -4549,6 +4586,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -4634,6 +4672,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -4719,6 +4758,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -4804,6 +4844,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -4889,6 +4930,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -4974,6 +5016,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -5059,6 +5102,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -5144,6 +5188,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -5229,6 +5274,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -5314,6 +5360,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -5399,6 +5446,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -5484,6 +5532,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -5569,6 +5618,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -5654,6 +5704,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -5739,6 +5790,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -5824,6 +5876,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -5909,6 +5962,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -5994,6 +6048,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -6079,6 +6134,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -6164,6 +6220,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -6249,6 +6306,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -6334,6 +6392,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -6419,6 +6478,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -6504,6 +6564,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -6589,6 +6650,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -6674,6 +6736,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -6759,6 +6822,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -6844,6 +6908,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -6929,6 +6994,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -7014,6 +7080,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -7099,6 +7166,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -7184,6 +7252,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -8392,6 +8461,7 @@
 								"deceleration": 1000,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": true,
 								"enabled": false
 							}
@@ -8830,7 +8900,16 @@
 					},
 					"uid": 28,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Rotate": {
+							"properties": {
+								"speed": 180,
+								"acceleration": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": -129.49050785960614,
 						"y": 62.65631150118392,
@@ -9017,6 +9096,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -9175,6 +9255,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -9242,6 +9323,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -10247,6 +10329,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": true,
 								"enabled": true
 							}
@@ -11066,6 +11149,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -11134,6 +11218,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -11202,6 +11287,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -11270,6 +11356,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -11338,6 +11425,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -11406,6 +11494,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -11474,6 +11563,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -11542,6 +11632,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -11855,6 +11946,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -11923,6 +12015,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -11990,6 +12083,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -12057,6 +12151,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -13084,6 +13179,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -13151,6 +13247,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -13219,6 +13316,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -13287,6 +13385,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -13355,6 +13454,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -13423,6 +13523,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -13491,6 +13592,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -13559,6 +13661,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -13627,6 +13730,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -13695,6 +13799,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}
@@ -13763,6 +13868,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
+								"allow-sliding": false,
 								"default-controls": false,
 								"enabled": true
 							}

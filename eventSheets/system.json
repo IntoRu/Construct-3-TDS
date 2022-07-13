@@ -2290,6 +2290,77 @@
 						}
 					],
 					"sid": 766097745828031
+				},
+				{
+					"eventType": "comment",
+					"text": "НАВЕДЕНИЕ ПРИЦЕЛА НА ВРАГА"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "aim",
+							"sid": 983866864135134,
+							"parameters": {
+								"object": "enemies"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "aim",
+							"sid": 455174063846784,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "aim",
+							"sid": 670784598384569,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 535465724826038
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "aim",
+							"sid": 806691614879378,
+							"parameters": {
+								"object": "enemies"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "aim",
+							"sid": 579104486730624,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "aim",
+							"sid": 963521213420134,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 174067726143732
 				}
 			],
 			"sid": 860028013614408
