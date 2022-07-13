@@ -8456,8 +8456,8 @@
 						}
 					},
 					"world": {
-						"x": 280,
-						"y": 364,
+						"x": 404,
+						"y": 609,
 						"width": 56,
 						"height": 53,
 						"originX": 0.5,
@@ -10443,7 +10443,7 @@
 					"uid": 197,
 					"instanceVariables": {
 						"select": "tank",
-						"life": 100000,
+						"life": 100,
 						"state": "normal",
 						"shells": 30
 					},

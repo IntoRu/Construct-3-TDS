@@ -1696,7 +1696,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "player_target",
-							"sid": 593158157462216,
+							"sid": 895783614152714,
 							"parameters": {
 								"object": "player_plane",
 								"layer": "\"character\"",
