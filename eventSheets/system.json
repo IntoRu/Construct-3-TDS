@@ -2670,6 +2670,17 @@
 							"id": "destroy",
 							"objectClass": "player_bullet",
 							"sid": 675763310962065
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 703711844263104,
+							"parameters": {
+								"audio-file": "whater",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 400055130728468
@@ -2730,6 +2741,17 @@
 							"id": "destroy",
 							"objectClass": "player_tank_shell",
 							"sid": 577871789758490
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 964734281336967,
+							"parameters": {
+								"audio-file": "whater",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 915292494891031
@@ -2798,6 +2820,17 @@
 							"sid": 515725649693997,
 							"parameters": {
 								"tag": "\"destroy\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 156835129943952,
+							"parameters": {
+								"audio-file": "whater",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
