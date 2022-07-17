@@ -128,10 +128,10 @@
 				{
 					"id": "go-to-url",
 					"objectClass": "Browser",
-					"sid": 317900689566259,
+					"sid": 286872366280253,
 					"parameters": {
 						"url": "\"https://intoru.netlify.app\"",
-						"target": "self"
+						"target": "parent"
 					}
 				}
 			],
