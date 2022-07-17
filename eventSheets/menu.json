@@ -121,9 +121,18 @@
 			],
 			"actions": [
 				{
-					"id": "close",
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 108776337829733
+				},
+				{
+					"id": "go-to-url",
 					"objectClass": "Browser",
-					"sid": 577298046410298
+					"sid": 317900689566259,
+					"parameters": {
+						"url": "\"https://intoru.netlify.app\"",
+						"target": "self"
+					}
 				}
 			],
 			"sid": 802669685320113
