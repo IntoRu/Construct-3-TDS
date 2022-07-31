@@ -42,6 +42,16 @@
 			"sid": 457658254024718
 		},
 		{
+			"eventType": "variable",
+			"name": "evacuation",
+			"type": "string",
+			"initialValue": "no",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 858917596115046
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Game",
@@ -2304,7 +2314,13 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Завершение Миссии - переход на новый уровень"
+					"text": "Завершение Миссии - переход на новый уровень",
+					"background-color": [
+						0.8156862745098039,
+						0.09019607843137255,
+						0.8705882352941177,
+						1
+					]
 				},
 				{
 					"eventType": "block",
@@ -2468,6 +2484,105 @@
 						}
 					],
 					"sid": 492069193057886
+				},
+				{
+					"eventType": "comment",
+					"text": "Завершение Миссии по спасению - переход на новый уровень",
+					"background-color": [
+						0.8156862745098039,
+						0.09019607843137255,
+						0.8705882352941177,
+						1
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_soldier",
+							"sid": 868279794995523,
+							"parameters": {
+								"object": "civic"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 199639382130625,
+							"parameters": {
+								"variable": "evacuation",
+								"value": "\"yes\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 232967688487135,
+							"parameters": {
+								"audio-file": "checkpoint",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "civic",
+							"sid": 532778965046789
+						}
+					],
+					"sid": 463626688569047
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player_soldier",
+							"sid": 970801629857444,
+							"parameters": {
+								"object": "transport_evaciation"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 115078658810002,
+							"parameters": {
+								"variable": "evacuation",
+								"comparison": 0,
+								"value": "\"yes\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-all",
+							"objectClass": "Audio",
+							"sid": 896576323873790
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 881536379954185,
+							"parameters": {
+								"layout": "level2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 906720670707482,
+							"parameters": {
+								"variable": "evacuation",
+								"value": "\"no\""
+							}
+						}
+					],
+					"sid": 287442073188463
 				},
 				{
 					"eventType": "comment",

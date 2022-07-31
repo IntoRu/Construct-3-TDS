@@ -1,0 +1,49 @@
+{
+	"name": "transport_evaciation",
+	"plugin-id": "Sprite",
+	"sid": 374004263297761,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 42,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2762947,
+						"collisionPoly": {
+							"points": [
+								0.023809523809523808,
+								0.023809523809523808,
+								0.9761904761904762,
+								0.023809523809523808,
+								0.9761904761904762,
+								0.9761904761904762,
+								0.023809523809523808,
+								0.9761904761904762
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 521203554511787,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

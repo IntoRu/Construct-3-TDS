@@ -227,7 +227,9 @@
 			"player_plane",
 			"whater",
 			"whater_background",
-			"Text2"
+			"Text2",
+			"civic",
+			"transport_evaciation"
 		],
 		"subfolders": [
 			{
