@@ -87,6 +87,14 @@
 					"id": "stop-all",
 					"objectClass": "Audio",
 					"sid": 282151774267473
+				},
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 594137997880686,
+					"parameters": {
+						"cursor-style": "none"
+					}
 				}
 			],
 			"sid": 611751633996518

@@ -226,7 +226,8 @@
 			"guide",
 			"player_plane",
 			"whater",
-			"whater_background"
+			"whater_background",
+			"Text2"
 		],
 		"subfolders": [
 			{
@@ -649,12 +650,12 @@
 		"renderingMode": "auto",
 		"anisotropicFiltering": "auto",
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "splash",
+		"loaderStyle": "progress",
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https"
 	},
 	"viewportWidth": 854,
 	"viewportHeight": 480,
-	"firstLayout": null
+	"firstLayout": "menu"
 }
