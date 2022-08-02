@@ -1,0 +1,55 @@
+{
+	"name": "transport_evacuation_rotate",
+	"plugin-id": "Sprite",
+	"sid": 942939795613011,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 430530107982970
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 285,
+						"height": 291,
+						"originX": 0.49473684210526314,
+						"originY": 0.5103092783505154,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7719230,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.003436426116838488,
+								1,
+								0.003436426116838488,
+								1,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 594757506463054,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

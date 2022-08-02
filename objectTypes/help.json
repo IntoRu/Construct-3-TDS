@@ -1,36 +1,35 @@
 {
-	"name": "civic",
+	"name": "help",
 	"plugin-id": "Sprite",
-	"sid": 877452199035977,
+	"sid": 504128533576845,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 220581422067285
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 17,
-						"height": 25,
-						"originX": 0.1260504201680672,
-						"originY": 0.4336842105263157,
+						"width": 250,
+						"height": 250,
+						"originX": 0.504,
+						"originY": 0.924,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1677219,
+						"imageSpriteId": 1213371,
 						"useCollisionPoly": true,
-						"imagePoints": [
-							{
-								"name": "help",
-								"x": 0.47058823529411764,
-								"y": -0.52
-							}
-						],
 						"duration": 1
 					}
 				],
-				"sid": 171126192466921,
+				"sid": 520443066961613,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

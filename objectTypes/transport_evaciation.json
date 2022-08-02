@@ -4,34 +4,47 @@
 	"sid": 374004263297761,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 442192979736902
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 42,
-						"height": 42,
+						"width": 98,
+						"height": 330,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.3424242424242424,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2762947,
+						"imageSpriteId": 9182927,
 						"collisionPoly": {
 							"points": [
-								0.023809523809523808,
-								0.023809523809523808,
-								0.9761904761904762,
-								0.023809523809523808,
-								0.9761904761904762,
-								0.9761904761904762,
-								0.023809523809523808,
-								0.9761904761904762
+								0.025996112730806608,
+								0.012193362193362194,
+								1,
+								0.012193362193362194,
+								1,
+								0.9847763347763347,
+								0.025996112730806608,
+								0.9847763347763347
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "help",
+								"x": 0.5459183673469388,
+								"y": -0.20663780663780665
+							}
+						],
 						"duration": 1
 					}
 				],

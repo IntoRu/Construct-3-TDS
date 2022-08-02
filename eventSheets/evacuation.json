@@ -15,6 +15,67 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 915941813962162
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "help",
+					"sid": 191451531217332,
+					"parameters": {
+						"object": "civic",
+						"image-point-optional": "\"help\""
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "transport_evacuation_rotate",
+					"sid": 368955874502005,
+					"parameters": {
+						"object": "transport_evaciation",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 877243555881029,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 320902994935501,
+							"parameters": {
+								"variable": "evacuation",
+								"comparison": 0,
+								"value": "\"yes\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "help",
+							"sid": 669663519447134,
+							"parameters": {
+								"object": "transport_evaciation",
+								"image-point-optional": "\"help\""
+							}
+						}
+					],
+					"sid": 551046754261665
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "player_soldier",
 					"sid": 409610973082948,
@@ -56,6 +117,23 @@
 					"parameters": {
 						"visibility": "visible"
 					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "transport_evaciation",
+					"sid": 185506335269669,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "transport_evacuation_rotate",
+					"sid": 255195227979145,
+					"parameters": {
+						"visibility": "visible"
+					}
 				}
 			],
 			"sid": 214625306427921
@@ -83,6 +161,83 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-acceleration",
+					"objectClass": "transport_evacuation_rotate",
+					"sid": 341944977657978,
+					"behaviorType": "Rotate",
+					"parameters": {
+						"acceleration": "100"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "transport_evaciation",
+					"sid": 392081442374971,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "1"
+					}
+				},
+				{
+					"id": "set-acceleration",
+					"objectClass": "transport_evaciation",
+					"sid": 867341255144163,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"acceleration": "10"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "transport_evaciation",
+					"sid": 921849052668745,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "270"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "plaer_tank_body",
+					"sid": 966361151599333
+				},
+				{
+					"id": "destroy",
+					"objectClass": "player_tank_gun",
+					"sid": 230359476018494
+				},
+				{
+					"id": "destroy",
+					"objectClass": "tank_base",
+					"sid": 721287948582591
+				},
+				{
+					"id": "destroy",
+					"objectClass": "help",
+					"sid": 480765399973826
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 254250983234618,
+					"parameters": {
+						"seconds": "4"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "player_target",
+					"sid": 894105177760895
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 463293477213342,
+					"parameters": {
+						"seconds": "6"
+					}
+				},
 				{
 					"id": "stop-all",
 					"objectClass": "Audio",

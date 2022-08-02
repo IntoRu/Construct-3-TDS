@@ -229,7 +229,9 @@
 			"whater_background",
 			"Text2",
 			"civic",
-			"transport_evaciation"
+			"transport_evaciation",
+			"help",
+			"transport_evacuation_rotate"
 		],
 		"subfolders": [
 			{
