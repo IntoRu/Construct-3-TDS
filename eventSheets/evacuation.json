@@ -1,0 +1,113 @@
+{
+	"name": "evacuation",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Завершение Миссии по спасению - переход на новый уровень",
+			"background-color": [
+				0.8156862745098039,
+				0.09019607843137255,
+				0.8705882352941177,
+				1
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "player_soldier",
+					"sid": 409610973082948,
+					"parameters": {
+						"object": "civic"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 517174369087831,
+					"parameters": {
+						"variable": "evacuation",
+						"value": "\"yes\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 427659022712513,
+					"parameters": {
+						"audio-file": "checkpoint",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "civic",
+					"sid": 640270609748203
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "transport_evaciation",
+					"sid": 719475504887060,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 214625306427921
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "player_soldier",
+					"sid": 307057612935032,
+					"parameters": {
+						"object": "transport_evaciation"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 231086056806079,
+					"parameters": {
+						"variable": "evacuation",
+						"comparison": 0,
+						"value": "\"yes\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 232174556092459
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 728925158625792,
+					"parameters": {
+						"layout": "level2"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 302095830705245,
+					"parameters": {
+						"variable": "evacuation",
+						"value": "\"no\""
+					}
+				}
+			],
+			"sid": 147006106756978
+		}
+	],
+	"sid": 445906725712847
+}

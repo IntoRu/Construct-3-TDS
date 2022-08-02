@@ -304,7 +304,8 @@
 		"items": [
 			"menu",
 			"system",
-			"dead"
+			"dead",
+			"evacuation"
 		],
 		"subfolders": []
 	},
