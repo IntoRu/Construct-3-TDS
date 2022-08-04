@@ -171,6 +171,14 @@
 					}
 				},
 				{
+					"id": "set-visible",
+					"objectClass": "transport_shadow",
+					"sid": 364794012510138,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "plaer_tank_body",
 					"sid": 847380595355774

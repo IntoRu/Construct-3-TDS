@@ -231,7 +231,8 @@
 			"civic",
 			"transport_evaciation",
 			"help",
-			"transport_evacuation_rotate"
+			"transport_evacuation_rotate",
+			"transport_shadow"
 		],
 		"subfolders": [
 			{

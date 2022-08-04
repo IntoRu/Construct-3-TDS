@@ -8507,6 +8507,35 @@
 			"subLayers": [],
 			"instances": [
 				{
+					"type": "transport_shadow",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 2055,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 252.78455733994605,
+						"y": 434.2258073532338,
+						"width": 25.008819898485484,
+						"height": 68.8380845572197,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.5
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "plaer_tank_body",
 					"properties": {
 						"initially-visible": true,
@@ -19181,8 +19210,8 @@
 						}
 					},
 					"world": {
-						"x": 160,
-						"y": 438,
+						"x": 220.91727815187943,
+						"y": 410.2831052434132,
 						"width": 28,
 						"height": 71,
 						"originX": 0.5,
