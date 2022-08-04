@@ -171,6 +171,39 @@
 					}
 				},
 				{
+					"id": "destroy",
+					"objectClass": "plaer_tank_body",
+					"sid": 847380595355774
+				},
+				{
+					"id": "destroy",
+					"objectClass": "player_tank_gun",
+					"sid": 566845582030880
+				},
+				{
+					"id": "destroy",
+					"objectClass": "tank_base",
+					"sid": 839979329677729
+				},
+				{
+					"id": "destroy",
+					"objectClass": "player_soldier",
+					"sid": 964707444197794
+				},
+				{
+					"id": "destroy",
+					"objectClass": "help",
+					"sid": 502402751009678
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 611248431309671,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
 					"id": "set-speed",
 					"objectClass": "transport_evaciation",
 					"sid": 392081442374971,
@@ -196,26 +229,6 @@
 					"parameters": {
 						"angle": "270"
 					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "plaer_tank_body",
-					"sid": 966361151599333
-				},
-				{
-					"id": "destroy",
-					"objectClass": "player_tank_gun",
-					"sid": 230359476018494
-				},
-				{
-					"id": "destroy",
-					"objectClass": "tank_base",
-					"sid": 721287948582591
-				},
-				{
-					"id": "destroy",
-					"objectClass": "help",
-					"sid": 480765399973826
 				},
 				{
 					"id": "wait",
