@@ -162,20 +162,65 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 996056987212076,
+					"parameters": {
+						"audio-file": "eva",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 404782519139076,
+					"parameters": {
+						"audio-file": "eva",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 697713641079312,
+					"parameters": {
+						"variable": "evacuation",
+						"value": "\"no\""
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "transport_evaciation",
+					"sid": 567680623189333,
+					"parameters": {
+						"object": "eva",
+						"layer": "\"tilemap_roads\"",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 899566115080460,
+					"parameters": {
+						"audio-file": "eva",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "set-acceleration",
 					"objectClass": "transport_evacuation_rotate",
 					"sid": 341944977657978,
 					"behaviorType": "Rotate",
 					"parameters": {
 						"acceleration": "100"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "transport_shadow",
-					"sid": 364794012510138,
-					"parameters": {
-						"visibility": "visible"
 					}
 				},
 				{
@@ -206,9 +251,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 611248431309671,
+					"sid": 709170517666056,
 					"parameters": {
-						"seconds": "5"
+						"seconds": "4"
 					}
 				},
 				{
@@ -245,6 +290,11 @@
 					"parameters": {
 						"seconds": "4"
 					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "eva",
+					"sid": 158552023384552
 				},
 				{
 					"id": "destroy",

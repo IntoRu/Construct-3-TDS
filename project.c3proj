@@ -232,7 +232,7 @@
 			"transport_evaciation",
 			"help",
 			"transport_evacuation_rotate",
-			"transport_shadow"
+			"eva"
 		],
 		"subfolders": [
 			{
@@ -520,6 +520,14 @@
 					"name": "menu.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 588307627427411,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "eva.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 139616020505841,
 					"file-info": {
 						"purpose": "none"
 					}

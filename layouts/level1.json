@@ -8507,35 +8507,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "transport_shadow",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": false,
-						"live-preview": false
-					},
-					"uid": 2055,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 252.78455733994605,
-						"y": 434.2258073532338,
-						"width": 25.008819898485484,
-						"height": 68.8380845572197,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							0.5
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "plaer_tank_body",
 					"properties": {
 						"initially-visible": true,
@@ -19167,7 +19138,11 @@
 					},
 					"uid": 2051,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 412.5,
 						"y": 301.5,
@@ -19199,7 +19174,7 @@
 					"behaviors": {
 						"Bullet": {
 							"properties": {
-								"speed": 10,
+								"speed": 0,
 								"acceleration": 0,
 								"gravity": 0,
 								"bounce-off-solids": false,
@@ -19207,11 +19182,14 @@
 								"step": false,
 								"enabled": true
 							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
 						}
 					},
 					"world": {
-						"x": 220.91727815187943,
-						"y": 410.2831052434132,
+						"x": 208.29929044236764,
+						"y": 464.9266387268397,
 						"width": 28,
 						"height": 71,
 						"originX": 0.5,
@@ -19305,6 +19283,51 @@
 							1
 						],
 						"angle": 0.7853981633974483,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "eva",
+					"properties": {
+						"rate": 50,
+						"spray-cone": 360,
+						"type": "continuous-spray",
+						"object": -1,
+						"live-preview": false,
+						"speed": 40,
+						"size": 7,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 10,
+						"y-randomiser": 10,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 50,
+						"grow-rate-randomiser": 0,
+						"acceleration": 0,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 200,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 3
+					},
+					"uid": 2056,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -300.5882821536639,
+						"y": 235.30622915932463,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							0.9568627450980393,
+							0.6431372549019608,
+							0.3764705882352941,
+							1
+						],
+						"angle": 0,
 						"zElevation": 0
 					}
 				}
