@@ -16,6 +16,22 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r302",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r302",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
@@ -40,24 +56,8 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Sprite",
-			"name": "Sprite",
-			"author": "Scirra",
-			"version": "r302",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
-			"author": "Scirra",
-			"version": "r302",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "Particles",
-			"name": "Particles",
 			"author": "Scirra",
 			"version": "r302",
 			"bundled": false
@@ -80,6 +80,38 @@
 		},
 		{
 			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
+			"author": "Scirra",
+			"version": "r302",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r302",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"version": "r302",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r302",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
 			"author": "Scirra",
@@ -96,40 +128,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Bullet",
-			"name": "Bullet",
-			"author": "Scirra",
-			"version": "r302",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "destroy",
-			"name": "Destroy outside layout",
-			"author": "Scirra",
-			"version": "r302",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Sin",
-			"name": "Sine",
-			"author": "Scirra",
-			"version": "r302",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
-			"author": "Scirra",
-			"version": "r302",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Rotate",
-			"name": "Rotate",
 			"author": "Scirra",
 			"version": "r302",
 			"bundled": false
@@ -227,12 +227,7 @@
 			"player_plane",
 			"whater",
 			"whater_background",
-			"Text2",
-			"civic",
-			"transport_evaciation",
-			"help",
-			"transport_evacuation_rotate",
-			"eva"
+			"Text2"
 		],
 		"subfolders": [
 			{
@@ -245,6 +240,17 @@
 				],
 				"subfolders": [],
 				"name": "tiles"
+			},
+			{
+				"items": [
+					"civic",
+					"eva",
+					"transport_evaciation",
+					"transport_evacuation_rotate",
+					"help"
+				],
+				"subfolders": [],
+				"name": "evacuation"
 			}
 		]
 	},

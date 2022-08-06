@@ -162,6 +162,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-instvar-value",
+					"objectClass": "tank_base",
+					"sid": 674606229595863,
+					"parameters": {
+						"instance-variable": "select",
+						"value": "\"evacuation\""
+					}
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 996056987212076,
@@ -257,6 +266,50 @@
 					}
 				},
 				{
+					"id": "set-range",
+					"objectClass": "enemi_soldier",
+					"sid": 974545756692181,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"range": "0"
+					}
+				},
+				{
+					"id": "set-animation-speed",
+					"objectClass": "enemi_soldier",
+					"sid": 512366472295531,
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "enemy_tank_gun",
+					"sid": 816714539678013,
+					"behaviorType": "Turret",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "enemy_rocket_machine_gun",
+					"sid": 509949114474102,
+					"behaviorType": "Turret",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "enemy_turret",
+					"sid": 523913410575502,
+					"behaviorType": "Turret",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
 					"id": "set-speed",
 					"objectClass": "transport_evaciation",
 					"sid": 392081442374971,
@@ -297,14 +350,9 @@
 					"sid": 158552023384552
 				},
 				{
-					"id": "destroy",
-					"objectClass": "player_target",
-					"sid": 894105177760895
-				},
-				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 463293477213342,
+					"sid": 595025823273950,
 					"parameters": {
 						"seconds": "6"
 					}
@@ -317,9 +365,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 728925158625792,
+					"sid": 744366353827225,
 					"parameters": {
-						"layout": "level2"
+						"layout": "level3"
 					}
 				},
 				{
@@ -333,6 +381,33 @@
 				}
 			],
 			"sid": 147006106756978
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "tank_base",
+					"sid": 664959908663762,
+					"parameters": {
+						"instance-variable": "select",
+						"comparison": 0,
+						"value": "\"evacuation\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "player_target",
+					"sid": 917305085098637,
+					"parameters": {
+						"object": "transport_evaciation",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 487854009271852
 		}
 	],
 	"sid": 445906725712847
