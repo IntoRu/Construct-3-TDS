@@ -516,6 +516,27 @@
 								"volume": "0",
 								"tag-optional": "\"\""
 							}
+						},
+						{
+							"type": "comment",
+							"text": "бриффинг"
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 669337488606610,
+							"parameters": {
+								"seconds": "7"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "brifing",
+							"sid": 109770013616705,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
 						}
 					],
 					"sid": 509598712672742

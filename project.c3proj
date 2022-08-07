@@ -264,6 +264,15 @@
 				],
 				"subfolders": [],
 				"name": "menu_buttons"
+			},
+			{
+				"items": [
+					"txt_brifing_1",
+					"txt_brifing_2",
+					"txt_brifing_3"
+				],
+				"subfolders": [],
+				"name": "brifing"
 			}
 		]
 	},
@@ -308,7 +317,8 @@
 	"families": {
 		"items": [
 			"enemies",
-			"buttons"
+			"buttons",
+			"brifing"
 		],
 		"subfolders": []
 	},

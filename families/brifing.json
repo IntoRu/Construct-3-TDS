@@ -1,0 +1,19 @@
+{
+	"name": "brifing",
+	"plugin-id": "Text",
+	"sid": 883765275450073,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 893200638485683
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"txt_brifing_2",
+		"txt_brifing_1",
+		"txt_brifing_3"
+	]
+}
