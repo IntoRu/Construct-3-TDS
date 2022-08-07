@@ -70,138 +70,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Text",
-					"properties": {
-						"text": "Новая игра",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 14,
-						"line-height": 0,
-						"bold": true,
-						"italic": false,
-						"color": [
-							0.027450980392156862,
-							0.09019607843137255,
-							0.9294117647058824,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left"
-					},
-					"uid": 4,
-					"instanceVariables": {
-						"class": "start"
-					},
-					"behaviors": {},
-					"world": {
-						"x": 3,
-						"y": 15,
-						"width": 200,
-						"height": 30,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Text",
-					"properties": {
-						"text": "Продолжить",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 14,
-						"line-height": 0,
-						"bold": true,
-						"italic": false,
-						"color": [
-							0.027450980392156862,
-							0.09019607843137255,
-							0.9294117647058824,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left"
-					},
-					"uid": 5,
-					"instanceVariables": {
-						"class": "continue"
-					},
-					"behaviors": {},
-					"world": {
-						"x": 8,
-						"y": 46,
-						"width": 200,
-						"height": 30,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Text",
-					"properties": {
-						"text": "Выход",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 14,
-						"line-height": 0,
-						"bold": true,
-						"italic": false,
-						"color": [
-							0.027450980392156862,
-							0.09019607843137255,
-							0.9294117647058824,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left"
-					},
-					"uid": 6,
-					"instanceVariables": {
-						"class": "exit"
-					},
-					"behaviors": {},
-					"world": {
-						"x": 2,
-						"y": 78,
-						"width": 200,
-						"height": 30,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "guide",
 					"properties": {
 						"text": "Движение - стандартные кнопки",
@@ -443,6 +311,138 @@
 						"height": 30,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "btn_menu_start",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 2056,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "size",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 10,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 112,
+						"y": 59,
+						"width": 110,
+						"height": 37,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "btn_menu_continue",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 2063,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "size",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 10,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 254.14876033057857,
+						"y": 57.61158033638944,
+						"width": 108.86999999999999,
+						"height": 40,
+						"originX": 0.45614035087719296,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "btn_menu_exit",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 2065,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "size",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 10,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 407.85951422068706,
+						"y": 57.595031233858435,
+						"width": 108.89898248524707,
+						"height": 40.12739356184761,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

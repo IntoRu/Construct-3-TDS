@@ -18814,9 +18814,9 @@
 					"uid": 236,
 					"instanceVariables": {
 						"select": "tank",
-						"life": 10000,
+						"life": 100,
 						"state": "normal",
-						"shells": 3000
+						"shells": 30
 					},
 					"behaviors": {
 						"8Direction": {

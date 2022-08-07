@@ -251,6 +251,19 @@
 				],
 				"subfolders": [],
 				"name": "evacuation"
+			},
+			{
+				"items": [
+					"btn_menu_start",
+					"btn_end_restart",
+					"btn_dead_start",
+					"btn_menu_continue",
+					"btn_dead_continue",
+					"btn_menu_exit",
+					"btn_end_exit"
+				],
+				"subfolders": [],
+				"name": "menu_buttons"
 			}
 		]
 	},
@@ -294,7 +307,8 @@
 	],
 	"families": {
 		"items": [
-			"enemies"
+			"enemies",
+			"buttons"
 		],
 		"subfolders": []
 	},

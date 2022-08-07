@@ -11,21 +11,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 735653314860778,
+					"sid": 126011672834305,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "Text"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Text",
-					"sid": 239215350310794,
-					"parameters": {
-						"instance-variable": "class",
-						"comparison": 0,
-						"value": "\"start\""
+						"object-clicked": "btn_dead_start"
 					}
 				}
 			],
@@ -56,21 +46,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 488079341019820,
+					"sid": 301734402387575,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "Text"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Text",
-					"sid": 296615979011554,
-					"parameters": {
-						"instance-variable": "class",
-						"comparison": 0,
-						"value": "\"continue\""
+						"object-clicked": "btn_dead_continue"
 					}
 				}
 			],
@@ -109,21 +89,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 222840306597810,
+					"sid": 951008405938567,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "Text"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Text",
-					"sid": 632984224991461,
-					"parameters": {
-						"instance-variable": "class",
-						"comparison": 0,
-						"value": "\"exit\""
+						"object-clicked": "btn_end_exit"
 					}
 				}
 			],

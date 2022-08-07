@@ -11,21 +11,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 729895164178800,
+					"sid": 569325921440133,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "Text"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Text",
-					"sid": 150774461497001,
-					"parameters": {
-						"instance-variable": "class",
-						"comparison": 0,
-						"value": "\"start\""
+						"object-clicked": "btn_menu_start"
 					}
 				}
 			],
@@ -47,6 +37,37 @@
 			"sid": 244993752711198
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 938007608236788,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "btn_end_restart"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 249837295247525
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 522325849717806,
+					"parameters": {
+						"layout": "level1"
+					}
+				}
+			],
+			"sid": 791636373010562
+		},
+		{
 			"eventType": "comment",
 			"text": "Продолжить игру"
 		},
@@ -56,21 +77,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 459283913216092,
+					"sid": 183444214904465,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "Text"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Text",
-					"sid": 705406729617518,
-					"parameters": {
-						"instance-variable": "class",
-						"comparison": 0,
-						"value": "\"continue\""
+						"object-clicked": "btn_menu_continue"
 					}
 				}
 			],
@@ -109,21 +120,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 364574986467693,
+					"sid": 933593275317016,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "Text"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Text",
-					"sid": 802867631398640,
-					"parameters": {
-						"instance-variable": "class",
-						"comparison": 0,
-						"value": "\"exit\""
+						"object-clicked": "btn_menu_exit"
 					}
 				}
 			],
@@ -144,6 +145,38 @@
 				}
 			],
 			"sid": 802669685320113
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 847741532905329,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "btn_end_exit"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 728398508522637
+				},
+				{
+					"id": "go-to-url",
+					"objectClass": "Browser",
+					"sid": 308310605281991,
+					"parameters": {
+						"url": "\"https://intoru.netlify.app\"",
+						"target": "parent"
+					}
+				}
+			],
+			"sid": 512402306195423
 		},
 		{
 			"eventType": "comment",

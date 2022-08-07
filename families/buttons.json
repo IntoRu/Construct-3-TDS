@@ -1,0 +1,23 @@
+{
+	"name": "buttons",
+	"plugin-id": "Sprite",
+	"sid": 687446055212131,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 463783225632464
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"btn_dead_continue",
+		"btn_dead_start",
+		"btn_end_exit",
+		"btn_end_restart",
+		"btn_menu_continue",
+		"btn_menu_exit",
+		"btn_menu_start"
+	]
+}
